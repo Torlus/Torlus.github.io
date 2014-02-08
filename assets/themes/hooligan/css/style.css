@@ -19,6 +19,14 @@ body {
   font-size: 18px;
 }
 
+em {
+  font-style: normal;
+  color: #e75;
+}
+strong {
+  color: #e75;
+}
+
 /* line 26, ../_sass/_base.scss */
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
