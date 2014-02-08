@@ -7,16 +7,11 @@ tagline: You have just reached my home page. Enjoy your stay...
 
 ## About
 
-I am Gregory, a.k.a Torlus, a software developer.
- 
-## Sample Posts
+I am Gregory Estrade, a.k.a **Torlus**, a software developer and a self-taught hardware hacker. I especially like reverse-engineering stuff, and use FPGAs to emulate ASICs.
 
-This blog contains sample posts which help stage pages and blog data.
-When you don't need the samples anymore just delete the `_posts/core-samples` folder.
+I also like what is called nowadays "retro-computing" or "retro-gaming", so my projects are almost all about emulation of old machines, or making it easier to use obsolete hardware on current technology.
 
-    $ rm -rf _posts/core-samples
-
-Here's a sample "posts list".
+## Posts
 
 <ul class="posts">
   {% for post in site.posts %}
