@@ -73,10 +73,10 @@
 					<ul>
 						<li>Smart[phones|cards] with Secure Elements, NFC, Biometry.</li>
 						<li>mPOS, Beacon (BLE), Host-Card Emulation. Geolocalization.</li>
-						<li>FIDO alliance's specifications. <a href="https://web-payments.org/specs/source/identity-credentials/">Identity Credentials</a></li>
+						<li>FIDO alliance's specifications. <a href="https://web-payments.org/specs/source/identity-credentials/">Identity Credentials</a>.</li>
 					</ul>
 					<hr />
-					<h3>OK, great! But there are some issues that need to be addressed...</h3>
+					<h3>There are some issues that need to be addressed.</h3>
 					<ul>
 						<li>Data aggregation.</li>
 						<li>Credentials copying across devices.</li>
@@ -90,29 +90,29 @@
 					<ul>
 						<li>Weakness in the <em>security</em> chain, i.e. within the devices.</li>
 						<li>Weakness in the <em>trust</em> chain. Some "social engineering" would be required.</li>
-						<li>Data acquisition and analysis on these targets. No issue there, as <em>the "dataset" is small.</em></li>
 					</ul>
 					<p></p>
 					<h3>Is it likely to succeed? Unfortunately yes. Why?</h3>
 					<ul>
 						<li>The targets can be identified easily, and each of them contains the full credentials.</li>
-						<li><em>Trust</em> is subjective. It's also a state of mind. It needs "training" (a.k.a experience) to use it right.</li>
+						<li><em>Trust</em> is subjective. It's also a state of mind. It needs "training" (a.k.a. unfortunate experiences) to get it right.</li>
 					</ul>
 				</section>
 
 				<section>
 					<h3><em>How to address these issues?</em></h3>
-					<h2>(Proxified) Secret Sharing</h2>
+					<h2>Secret Sharing</h2>
 					<ul>
+						<li>Example: <a href="http://point-at-infinity.org/ssss/">Shamir's Secret Sharing Scheme.</a>
 						<li>It lowers the burden of security on devices.</li>
 						<li>As the user (should) know that he/she will share sensitive data, it's more likely that he/she will perform properly the first <em>Identity</em> checks. <em>Education</em> is the key point here.</li>
 						<li>Idea: use the <em>IoT</em> for secret sharing. Objects, wearable devices become part of your Identity (as they are IRL).</li>
 					</ul>
 					<p></p>
-					<h2>Data Flooding as a Defense</h2>
+					<h2>Hand back control to the user</h2>
 					<ul>
-						<li>For most "spies", <em>collecting</em> data is easy. However, <em>analyzing</em> them can be hard, when the volume is high.</li>
-						<li>Use a <em>cryptocurrency</em> scheme where the <em>proof-of-work</em> concept has been moved from calculus to data transformation.</li>
+						<li>Use a <em>quorum</em> so that UX is adapted to the situation.</li>
+						<li>Let the user choose how he/she wants to identify him/herself.</li>
 					</ul>
 				</section>
 
