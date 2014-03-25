@@ -56,8 +56,8 @@ It's hard to know the state of the art of the different authentication systems, 
 Standardization could be envisioned in small steps, by taking most common use cases one by one. 
 Examples:
 
-- SMS OTPs could be standardized, which could lead to automatic OTP entry while browsing from your mobile phone.
-- Authentication forms provided by the issuer could be enhanced, using a standard allowing merchant-provided assets to be displayed on them, in order to avoid the "context-switching" issue.
+- Commom authentication schemes could be performed more natively into the browser, to avoid the redirection. Example, the ill-fated OTP via SMS.
+- Authentication forms provided by the issuer could be enhanced, using a standard allowing merchant-provided assets to be displayed on them, in order to lower the "context-switching" issue.
 
 ## Digital Receipts
 
@@ -67,7 +67,7 @@ There are (iat least) two kinds of receipts:
 - The payment gateway supplied receipt. One at least per payment method.
 
 The first type of receipt seems inappropriate for standardization, as its role is not limited to providing plain information about the payment.
-It can be used as a support for loyalty, future sales, donation fiscal receipt etc.
+It can be used as a support for loyalty, couponning, other purchases suggestions, donation fiscal receipt etc.
 
 The payment gateway provided receipt, however, could be standardized. Maybe as a multipart message, with a human-readable part, and a machine-readable part.
 

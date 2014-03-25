@@ -264,6 +264,11 @@ body {
 	margin: 0 0 0 1em;
 }
 
+/* GE */
+.reveal li {
+	margin-bottom: 4px;
+}
+
 .reveal ol {
 	list-style-type: decimal;
 }
