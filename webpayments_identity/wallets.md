@@ -1,22 +1,22 @@
 # Generalized Wallets Scheme - Merchant Integration
 
-This document's purpose it to match as close as possible the expectations of merchants. It may sometimes play the devil's advocate.
+I will try to address the expectations of merchants. I may sometimes play the devil's advocate, because what the merchant wants isn't always good for the customer.
 
 Let's review the steps of a standard purchase, and for each one, see what could be improved and where standards could help.
 
 ## Shopping cart contents
 
-Some payment services allow the merchant to provide them the shopping cart contents.
+Some payment services allow the merchant to provide them the shopping cart contents. It's even a mandatory step in for some of them.
 
-Pros:
+The advantages are:
 
 - If the customer is redirected to another website, he/she will probably feel more comfortable to see that everything looks consistent.
-- It provides some valuable data for fraud detection.
+- It provides some valuable data for fraud detection, and also for the digital receipt.
 
-Cons:
+The drawbacks:
 
-- Consistency must be perfect.
-- It raises some privacy concerns. I'm not sure that a customer would like to have all his/her purchase details handed out eventually to his/her bank.
+- Consistency must be achieved.
+- It raises some privacy concerns. I'm not sure that a customer would like to have all his/her purchase details handed out eventually to his/her bank or advertising companies.
 
 ## Billing and Shipping information
 
@@ -36,8 +36,9 @@ This deserves a special attention, as it can work both ways:
 - The merchant could provide a list of supported payment methods, for the wallet to filter.
 - Or the wallet could provide this list to the merchant.
 
-It would be a huge benefit for the merchant if he was able to know in advance which payment methods are available.
+It would be a huge benefit for the merchant if he was able to know in advance which payment methods are available for his/her current.
 Note that it is not necessarly to restrict the choice of these payment methods, as some of them propose an enrollment scheme. Examples: credit offers, wallets. Revenue sharing is likely to be involved in this case.
+Also, some card issuers provide time-limited offers, such as "pay in 3 times, with no extra charge", so it would be up to the merchant to present payment options in a given order.
 
 ## Payment method(s) entry
 
@@ -61,7 +62,7 @@ Examples:
 
 ## Digital Receipts
 
-There are (iat least) two kinds of receipts:
+There are (at least) two kinds of receipts:
 
 - The merchant-supplied receipt. How many in the case of marketplaces?
 - The payment gateway supplied receipt. One at least per payment method.
