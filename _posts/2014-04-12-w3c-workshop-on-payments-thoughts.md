@@ -20,5 +20,5 @@ Some links about this event:
 
 - Virginie's articles [here](http://poulpita.com/2014/03/28/w3c-2-days-with-the-payment-industry/) and [here](http://poulpita.com/2014/04/04/about-the-very-simple-question-of-identity-security-and-privacy-in-web-payment/).
 - Bailey's article on [PaymentsSource](http://www.paymentssource.com/news/standardizing-web-payments-could-shake-up-industry-incumbents-3017589-1.html).
-
+- Manu Sporny's [blog post](http://manu.sporny.org/2014/dawn-of-web-payments/).
 
