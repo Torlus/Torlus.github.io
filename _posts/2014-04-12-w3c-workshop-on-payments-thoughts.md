@@ -17,6 +17,7 @@ There are a few things that in my opinion went not so well. First, many discussi
 However, even if obviously standardization in the payments area will take a lot of time, this kind of workshop show that people at W3C have it right. Having all the people involved in payments participate to the standardization effort, even if they are not usually involved into standards, seems to me the only way for such a huge task to succeed.
 
 Some links about this event:
+
 - Virginie's articles [here](http://poulpita.com/2014/03/28/w3c-2-days-with-the-payment-industry/) and [here](http://poulpita.com/2014/04/04/about-the-very-simple-question-of-identity-security-and-privacy-in-web-payment/).
 - Bailey's article on [PaymentsSource](http://www.paymentssource.com/news/standardizing-web-payments-could-shake-up-industry-incumbents-3017589-1.html).
 
