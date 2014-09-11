@@ -9,9 +9,13 @@ tagline: Agile methodology applied to construction work
 
 ## L'appartement
 
-On est dans du "chantier pas fini permanent", un peu comme l'appart de René :-) mais en pire. Illustration.
+On est dans du "chantier pas fini permanent", un peu comme l'appart de René :-) mais en pire.
+
+Illustration:
 
 ![Le lieu du crime](appart.jpg)
+
+La c'est le salon, les chambres c'est le même esprit, y'a que la chambre de Yun qui fait plus "finie". Après il y a la salle de bains, qui est finie, mais moche. Années 60-70, remember, on s'approche du bon goût sans jamais tomber dedans.
 
 ## I had a dream
 
@@ -33,6 +37,10 @@ L'un des gros fils rouges part dans une gaine qui alimente un tableau moins old-
 
 C'est la gaine complètement à droite, qui descend dans le tableau. Le reste des gaines remonte dans un faux plafond. Le concepteur de l'installation suivante devait être atteint de plaquystérie aïgue. Aïe.
 
+Le tableau en question:
+
+![Tableau](tableau.png)
+
 ## L'installation d'origine
 
-On est dans le minimaliste, mais au moins ça marche.
+On est dans le minimaliste.
