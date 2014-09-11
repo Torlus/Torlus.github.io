@@ -15,23 +15,35 @@ Illustration:
 
 ![Le lieu du crime](appart.jpg)
 
-La c'est le salon, les chambres c'est le même esprit, y'a que la chambre de Yun qui fait plus "finie". Après il y a la salle de bains, qui est finie, mais moche. Années 60-70, remember, on s'approche du bon goût sans jamais tomber dedans.
+Là c'est le salon, la chambre de Nicolas c'est le même esprit, y'a que la chambre de Yun qui fait plus "finie".
+
+Après il y a la salle de bains, qui est finie, mais moche. Années 60-70, remember, on flirte avec le bon goût sans jamais tomber dedans.
 
 ## I had a dream
 
-Plans, etc.
+C'est là que tout est permis, on se lâche, et hop on arrive à ça:
+
+![Plan9](schemaElecDone.png)
+
+Ca c'est rien, encore, allez hop, la troidé:
+
+![PlanQ](yunHome.jpg)
 
 # Electricité - Etat des lieux
 
 ## La source
 
-Situé au-dessus de la porte d'entrée, le disjoncteur qui fleure bon les années 60. A sa gauche le différentiel général (enfin je crois) qui a l'air d'arriver sur un euh... "trilili", sobrement intitulé "répartition phase".
+Situé au-dessus de la porte d'entrée, le disjoncteur qui fleure bon le vinyle. A sa gauche le différentiel général (enfin je crois) qui a l'air d'arriver sur un... "trilili", sobrement intitulé "répartition phase".
+
+**TODO? Remplacer ce truc?**
 
 ![Top départ](depart.jpg)
 
 La plupart de la filasse sortant de ce répartiteur part dans des tuyaux old-school qui constituent l'installation d'origine.
 
-L'un des gros fils rouges part dans une gaine qui alimente un tableau moins old-school.
+L'un des gros fils rouges part dans une gaine qui alimente un tableau standard.
+
+**TODO? Tableau plus petit? Ou le compléter et y faire tout descendre?**
 
 ![Descente](secondaire.jpg)
 
@@ -43,4 +55,30 @@ Le tableau en question:
 
 ## L'installation d'origine
 
-On est dans le minimaliste.
+A l'origine, ça couvrait toutes les pièces (thank you, captain obvious).
+
+Maintenant, ça couvre la cuisine, la salle de bains, la chambre de Yun.
+
+**TODO? Remplacer à minima les prises, interrupteurs, parce que là ça fait peur.**
+
+### Salon
+
+D'après Yun, le plafonnier n'a jamais fonctionné. Diantre. Mais bon, l'électro-plaquiste, faute d'avoir la lumière à tous les étages, a compensé en clapissant le faux plafond de spots. Une véritable poussée d'acné(ons).
+
+### Chambre de Nicolas
+
+L'éclairage au plafond dans la chambre de Nicolas a été désactivé.
+
+La nouvelle installation...
+
+Une saignée a été entamée dans le mur d'origine pour y faire passer 3 prises, mais ça n'a pas été terminé.
+
+**TODO? Terminer ce qui a été entamé... C'est quoi cette manie de ne rien finir?**
+
+### Cuisine
+
+Il y a eu un charcutage de la cloison d'origine, d'où pendouille lamentablement l'interrupteur de l'éclairage par néon, ainsi qu'un autre interrupteur vintage qui selon Yun devait piloter l'éclairage du couloir.
+
+**TODO? Recaler ça contre un mur, mettre un vrai interrupteur, virer ce néon, et peut-être trouver une autre idée que le néon.**
+
+**TODO? Virer l'interrupteur inconnu.**
