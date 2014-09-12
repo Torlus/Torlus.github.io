@@ -9,7 +9,7 @@ tagline: Agile methodology applied to construction work
 
 ## L'appartement
 
-On est dans du "chantier pas fini permanent", un peu comme l'appart de René :-) mais en pire.
+On est dans du "chantier pas fini permanent", un peu comme l'appart de René :-) mais en bien pire.
 
 Illustration:
 
@@ -17,7 +17,7 @@ Illustration:
 
 Là c'est le salon, la chambre de Nicolas c'est le même esprit, y'a que la chambre de Yun qui fait plus "finie".
 
-Après il y a la salle de bains, qui est finie, mais moche. Années 60-70, remember, on flirte avec le bon goût sans jamais tomber dedans.
+Après il y a la salle de bains, qui est finie, mais moche. Années 60-70, souvenez-vous (ou imaginez), on flirte avec le bon goût sans jamais tomber dedans.
 
 ## I had a dream
 
@@ -25,7 +25,7 @@ C'est là que tout est permis, on se lâche, et hop on arrive à ça:
 
 ![Plan9](schemaElecDone.png)
 
-Ca c'est rien, encore, allez hop, la troidé:
+Ca c'est rien, encore, allez hop, la troisième dimension:
 
 ![PlanQ](yunHome.jpg)
 
@@ -78,6 +78,8 @@ Le plafonnier
 ### Cuisine
 
 Il y a eu un charcutage de la cloison d'origine, d'où pendouille lamentablement l'interrupteur de l'éclairage par néon, ainsi qu'un autre interrupteur vintage qui selon Yun devait piloter l'éclairage du couloir.
+
+![Cuisine](cuisine.png)
 
 **TODO? Recaler ça contre un mur, mettre un vrai interrupteur, virer ce néon, et peut-être trouver une autre idée que le néon.**
 
