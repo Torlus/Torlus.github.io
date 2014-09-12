@@ -33,7 +33,7 @@ Ca c'est rien, encore, allez hop, la troidé:
 
 ## La source
 
-Situé au-dessus de la porte d'entrée, le disjoncteur qui fleure bon le vinyle. A sa gauche le différentiel général (enfin je crois) qui a l'air d'arriver sur un... "trilili", sobrement intitulé "répartition phase".
+Situé au-dessus de la porte d'entrée, le disjoncteur qui fleure bon le vintage. A sa gauche le différentiel général (enfin je crois) qui a l'air d'arriver sur un... "trilili", sobrement intitulé "répartition phase".
 
 **TODO? Remplacer ce truc?**
 
@@ -69,11 +69,11 @@ D'après Yun, le plafonnier n'a jamais fonctionné. Diantre. Mais bon, l'électr
 
 L'éclairage au plafond dans la chambre de Nicolas a été désactivé.
 
-La nouvelle installation...
+![Nico1](nico1.png)
 
-Une saignée a été entamée dans le mur d'origine pour y faire passer 3 prises, mais ça n'a pas été terminé.
+Le plafonnier
 
-**TODO? Terminer ce qui a été entamé... C'est quoi cette manie de ne rien finir?**
+![Nico2](nico2.jpg)
 
 ### Cuisine
 
@@ -82,3 +82,31 @@ Il y a eu un charcutage de la cloison d'origine, d'où pendouille lamentablement
 **TODO? Recaler ça contre un mur, mettre un vrai interrupteur, virer ce néon, et peut-être trouver une autre idée que le néon.**
 
 **TODO? Virer l'interrupteur inconnu.**
+
+## La nouvelle installation
+
+Tout commence par un faux-plafond, se poursuit par des plaques superposées sur les cloisons d'origines en brique.
+
+J'ai cherché une blague à faire genre "la groupie du plaquiste", mais j'ai pas trouvé. Ou peut-être que si, tiens.
+
+### Le couloir
+
+Explication de texte à faire.
+
+![Couloir1](couloir1.jpg)
+
+Explication de texte à faire.
+
+![Couloir2](couloir2.jpg)
+
+### Chambre de Nicolas
+
+Une saignée a été entamée dans le mur d'origine pour y faire passer 3 prises, mais ça n'a pas été terminé.
+
+![Nico3](nico3.jpg)
+
+**TODO? Terminer ce qui a été entamé... C'est quoi cette manie de ne rien finir?**
+
+De l'autre côté, des prises ont été posées.
+
+![Nico4](nico4.jpg)
