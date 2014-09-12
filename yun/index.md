@@ -29,6 +29,12 @@ Ca c'est rien, encore, allez hop, la troisième dimension:
 
 ![PlanQ](yunHome.jpg)
 
+### Chambre de Nicolas
+
+Voilà la chambre de rêve du djeunz:
+
+![NicoDream](nicodream.png)
+
 # Electricité - Etat des lieux
 
 ## La source
@@ -93,11 +99,13 @@ J'ai cherché une blague à faire genre "la groupie du plaquiste", mais j'ai pas
 
 ### Le couloir
 
-Explication de texte à faire.
+A gauche, arrivée du jus depuis le faux plafond. Saignée faite pour y mettre un interrupteur et un plafonnier.
+
+**TODO? Finir le taf.**
 
 ![Couloir1](couloir1.jpg)
 
-Explication de texte à faire.
+A droite, ça part dans le placard de Yun, et hop ça ressort dans la chambre de Nicolas côté droit.
 
 ![Couloir2](couloir2.jpg)
 
@@ -112,3 +120,23 @@ Une saignée a été entamée dans le mur d'origine pour y faire passer 3 prises
 De l'autre côté, des prises ont été posées.
 
 ![Nico4](nico4.jpg)
+
+# Demain, c'est déjà hier
+
+Idées en vrac, y'aura de tout, de la plomberie, maçonnerie, peinture, etc.
+
+## Chambre de Nicolas
+
+- **On vire le plafonnier, la lumière sortant du mur côté droit ira bien, on pourra peut-être mettre de l'halogène (éclairage indirect). Plafond blanc.**
+- **On vire le radiateur côté gauche. On met un petit convecteur sur le mur, mais plus proche de l'entrée?**
+- **Le parquet est bof. Parquet flottant par-dessus? On fait quoi du couloir et du reste?**
+- **Le mur de droite est au nord, donc ça caille en hiver. On rajoute une couche d'isolation (placo / laine de verre ?)**
+- **Autres murs: ponçage et plâtre?**
+- **La fenêtre s'ouvre vers l'extérieur. Donc tringle dans la largeur.**
+- **On récupère l'espace occupé par le placard de la chambre de Yun.**
+
+## Chambre de Yun
+
+- **Le placard dégage, on met une cloison a la place.**
+- **La porte d'entrée se retrouve en face de celle de Nicolas. On vire donc le radiateur.**
+- **On récupère donc la largeur de la porte d'origine pour en faire la profondeur d'un placard mural.**
