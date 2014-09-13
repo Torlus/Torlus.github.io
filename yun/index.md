@@ -145,7 +145,7 @@ Idées en vrac, y'aura de tout, de la plomberie, maçonnerie, peinture, etc.
 
 # Au boulot
 
-Hop c'est parti. La team cogite, ça think-tanke. Tofu or not tofu, that is the question.
+Hop c'est parti. La team cogite, ça think-tanke. Tofu or not tofu, that is the question. Avec un doigt de pensée coréenne.
 
 ![Team](team.jpg)
 
@@ -169,3 +169,35 @@ Hop c'est parti. La team cogite, ça think-tanke. Tofu or not tofu, that is the 
 - Disjoncteur différentiel 40A et 30mA
 - 4 peignes
 - 2 interrupteurs en saillie
+
+## Electricité - Premiers secours
+
+Avec la fameuse méthodologie "Dick and Knife", on complète le tableau.
+
+![Work1](work1.jpg)
+
+Hop, ça en jette déjà plus:
+
+![Work2](work2.png)
+
+Les pièges sont nombreux, mais on ne relâche pas la surveillance.
+
+![Work3](work3.jpg)
+
+## Electricité - Convalescence
+
+Le triple pontage et l'ablation des appendices sont un franc succès. Fini les trucs qui pendouillent:
+
+![Work4](work4.jpg)
+
+Le tableau s'est enrichi, prêt à accueillir l'installation flambant neuve (ou pas):
+
+![Work5](work5.png)
+
+L'interrupteur, posé rustiquement, mais fonctionnel. Exit le néon baveux, place au spot dans la cuisine.
+
+![Work6](work6.png)
+
+L'interrupteur de l'entrée, dans sa blancrêmeuse splendeur.
+
+![Work7](work7.png)
