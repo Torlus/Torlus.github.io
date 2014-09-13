@@ -140,3 +140,24 @@ Idées en vrac, y'aura de tout, de la plomberie, maçonnerie, peinture, etc.
 - **Le placard dégage, on met une cloison a la place.**
 - **La porte d'entrée se retrouve en face de celle de Nicolas. On vire donc le radiateur.**
 - **On récupère donc la largeur de la porte d'origine pour en faire la profondeur d'un placard mural.**
+
+# Electricité - Matos
+- (10^2 5m en 3 couleurs)
+- Boite derivation grande étanche
+- Raccords rapides Wago
+![Wago](http://www.tme.eu/u/NewProducts1/wago-2273.jpg)
+- Dominos assortiment
+- 2,5 et 1,5 en 3 couleurs (25m)
+- Grosse goulotte 10x5
+- Serflex
+![Serflex](http://www.widstore.com/images/IMG_0532.png)
+- Anneaux à numéroter
+- (Petite goulotte 2x1)
+- Vis et chevilles
+- Chevilles Crampon
+- 4 disjoncteurs 10A
+- 5 disjoncteurs 20A
+- 1 disjoncteur 32A
+- Disjoncteur différentiel 40A et 30mA
+- 4 peignes
+- 2 interrupteurs en saillie
