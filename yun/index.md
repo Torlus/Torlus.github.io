@@ -35,6 +35,8 @@ Voilà la chambre de rêve du djeunz:
 
 ![NicoDream](nicodream.png)
 
+Sur le côté droit, on mettra surement un bureau.
+
 # Electricité - Etat des lieux
 
 ## La source
@@ -141,7 +143,13 @@ Idées en vrac, y'aura de tout, de la plomberie, maçonnerie, peinture, etc.
 - **La porte d'entrée se retrouve en face de celle de Nicolas. On vire donc le radiateur.**
 - **On récupère donc la largeur de la porte d'origine pour en faire la profondeur d'un placard mural.**
 
-# Electricité - Matos
+# Au boulot
+
+Hop c'est parti. La team cogite, ça think-tanke. Tofu or not tofu, that is the question.
+
+![Team](team.jpg)
+
+## Electricité - Matos
 - (10^2 5m en 3 couleurs)
 - Boite derivation grande étanche
 - Raccords rapides Wago
