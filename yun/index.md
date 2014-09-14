@@ -132,8 +132,8 @@ Idées en vrac, y'aura de tout, de la plomberie, maçonnerie, peinture, etc.
 - **On vire le plafonnier, la lumière sortant du mur côté droit ira bien, on pourra peut-être mettre de l'halogène (éclairage indirect). Plafond blanc.**
 - **On vire le radiateur côté gauche. On met un petit convecteur sur le mur, mais plus proche de l'entrée?**
 - **Le parquet est bof. Parquet flottant par-dessus? On fait quoi du couloir et du reste?**
-- **Le mur de droite est au nord, donc ça caille en hiver. On rajoute une couche d'isolation (placo / laine de verre ?)** ***SiliTeam: plutôt du bois, plus solide, moins épais, mieux.***
-- **Autres murs: ponçage et plâtre?** ***SiliTeam: nope. On met de la "résine murale" (sic Greg, redemander le vrai nom).***
+- **Le mur de droite est au nord, donc ça caille en hiver. On rajoute une couche d'isolation (placo / laine de verre ?)** *SiliTeam: plutôt du bois, plus solide, moins épais, mieux.*
+- **Autres murs: ponçage et plâtre?** *SiliTeam: nope. On met de la "résine murale" (sic Greg, redemander le vrai nom).*
 - **La fenêtre s'ouvre vers l'extérieur. Donc tringle dans la largeur.**
 - **On récupère l'espace occupé par le placard de la chambre de Yun.**
 
