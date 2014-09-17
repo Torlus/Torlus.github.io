@@ -145,7 +145,7 @@ Idées en vrac, y'aura de tout, de la plomberie, maçonnerie, peinture, etc.
 
 # Au boulot
 
-C'est parti. La team cogite, ça think-tanke. Tofu or not tofu, that is the question. Avec un doigt de pensée coréenne.
+C'est parti. La team cogite, ça think-tanke. Avec un doigt de pensée coréenne. Tofu or not tofu, that is the question.
 
 ![Team](team.jpg)
 
