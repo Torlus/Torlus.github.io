@@ -201,3 +201,53 @@ L'interrupteur, posé rustiquement, mais fonctionnel. Exit le néon baveux, plac
 L'interrupteur de l'entrée, dans sa blancrêmeuse splendeur.
 
 ![Work7](work7.png)
+
+# Day of the tentacle
+
+On y retourne. Cette fois, il en sera terminé de l'electricité spaghetti.
+
+Cette installation sera propre comme un site web dont le layout serait fait à base de &lt;table&gt; comme au bon vieux temps. Non mais.
+
+## Kill it with fire
+
+Première étape, refactoring, a.k.a on vire tout et on réfléchit après.
+
+![Demolition1](20141001_frx1.png)
+
+Pas de quartier, pas de pitié. Pas de jus non plus (oups).
+
+![Demolition2](20141001_frx2.png)
+
+## The A-Team
+
+Après cet acte d'une violence inouïe, revenons à des considérations plus paisibles.
+
+Tout d'abord, une telle intervention ça se planifie, ça se prépare. Ici la war room.
+
+![War1](20141001_greg1.png)
+
+Etiqueteuse, matos de compétiton, notes, calculs savants. Bref, Rocket Science en plus pacifique.
+
+Première étape, on soigne les blessés, voici donc une belle boite de dérivation toute neuve.
+Le cablage définitif sera fait plus tard, là on protège juste l'essentiel.
+
+![Peace](20141001_deriv.png)
+
+Au tour de René, qui nous rappelle, en bon citoyen helvète,
+que si l'horlogerie demande du talent et du travail, la pifométrie requiert du génie.
+
+![Genie1](20141001_rene1.png)
+
+Et que dire du sens de l'improvisation.
+
+![Balai](20141001_balai.png)
+
+## Trip at the brain
+
+Ah oui, on se demande pourquoi le fuck est cette chose pour?
+
+Réponse: téléportation du disjoncteur, et premiers raccord propres au tableau, étiquetés de manère Yunique.
+
+![Amour](20141001_disjyun.png)
+
+Prochaine étape, mise en application du Trash Driven Development, i.e tout ce qui ne sert à rien, hop poubelle.
