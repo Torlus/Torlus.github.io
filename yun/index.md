@@ -246,7 +246,7 @@ Et que dire du sens de l'improvisation.
 
 Ah oui, on se demande pourquoi le fuck est cette chose pour?
 
-Réponse: téléportation du disjoncteur, et premiers raccord propres au tableau, étiquetés de manère Yunique.
+Réponse: téléportation du disjoncteur, et premiers raccords propres au tableau, étiquetés de manère Yunique.
 
 ![Amour](20141001_disjyun.png)
 
