@@ -251,3 +251,41 @@ Réponse: téléportation du disjoncteur, et premiers raccords propres au tablea
 ![Amour](20141001_disjyun.png)
 
 Prochaine étape, mise en application du Trash Driven Development, i.e tout ce qui ne sert à rien, hop poubelle.
+
+# Green IT
+
+Et l'écologie dans tout ça? On y pense, on se creuse la tête, on perce les mystères de la nature,
+on se sublime transcendentalement... Mais je m'égare (Matabiau).
+
+![Perceuse](20141014_greg.png)
+
+Bref, contre toute attente, il y a une commande Jour/Nuit.
+Il est donc de notre devoir d'écocitoyens de réaliser cette économie d'énergie.
+
+Du coup on culpabilisera moins quand on jettera notre prochain Logabax dans la Garonne. C'est bon pour le karma.
+
+## Night and day
+
+La commande Jour/Nuit a donné au Franx un peu de fil à retordre.
+
+![Jour/Nuit](20141014_gf.jpg)
+
+Mais bon, c'est notre journée "hippie", donc on est Green, on est Agile,
+et à grands coups de Planning Pokers, on finit par câbler ça correctement.
+
+Ca donne ça au tableau (Kan)bancal, notre Cloud est un Cumulus.
+
+![Kanban](20141014_kb.png)
+
+## Helvète Underground
+
+Auréole angélique et maîtrise des spaghetti. C'est beau. Latin.
+
+![Rene](20141014_rene.png)
+
+Il paraît que le Flat Design, c'est has-been. On parle de **Material Design**.
+
+Ne serait-ce pas ce que nous sommes précisément en train de faire?
+Avec de vrais matériaux?
+
+Croyez-moi (ou pas), le génie c'est parfois dur à porter (sur Garonne).
