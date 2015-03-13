@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Identity, Security and Privacy in the IoT era.</title>
+
+    <meta name="description" content="Identity, Security and Privacy in the IoT era.">
+    <meta name="author" content="Gregory Estrade">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black-night.css" id="theme">
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+
+    <!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+
+    <div class="reveal">
+
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+            <section>
+                <h3>Identity, Security and Privacy</h3>
+                <h2><em>in the IoT era</em></h2>
+                <hr />
+                <p>
+                    Gregory Estrade
+                    - <a href="http://lvt.tl/">http://lvt.tl/</a>
+                </p>
+                <p>
+                    <em>@Torlus</em> on
+                    <a href="https://twitter.com/Torlus">Twitter</a>,
+                    <a href="https://github.com/Torlus">GitHub</a>.
+                </p>
+            </section>
+
+            <section>
+                <h3><em>OLD</em> is <em>NEW</em> again.</h3>
+                <hr />
+                <img data-src="res/c64.png" alt="c64" height="300px" />
+                <h2 class="fragment"><a href="http://www.contiki-os.org/">Contiki</a></h2>
+                <p>
+                    <ul class="fragment">
+                        <li><em>THEN (2002):</em> connecting old hardware to Internet.</li>
+                        <li><em>NOW:</em> a complete OS for the IoT: 6LoWPAN, RPL, CoAP.</li>
+                    </ul>
+                </p>
+            </section>
+
+            <section>
+                <h3><em>OLD</em> is <em>NEW</em> again.</h3>
+                <hr />
+                <h3>Hardware-wise</h3>
+                <p>
+                <ul>
+                    <li>Processors: from <em>GHz</em> to <em>MHz</em>.</li>
+                    <li>Storage: from <em>GB</em> to <em>MB</em>, <em>KB</em>.</li>
+                    <li>Networking: from <em>Mb</em> to <em>Kb</em>.</li>
+                </ul>
+                </p>
+                <p>
+                <h3>Software-wise</h3>
+                <ul>
+                    <li><a href="http://xmpp.org/">XMPP</a>: 1999 (Jabber).</li>
+                    <li><a href="http://mqtt.org/">MQTT</a>: 1999.</li>
+                    <li><a href="http://www.amqp.org/">AMQP</a>: 2003.</li>
+                </ul>
+                </p>
+            </section>
+
+            <section>
+                <h3><em>OLD</em> is <em>NEW</em> again.</h3>
+                <hr />
+                <img data-src="res/bttf.jpg" alt="bttf" height="500px" />
+            </section>
+
+            <section>
+                <h3>State of the art.</h3>
+                <hr />
+                <h3><em>Standards and protocols</em></h3>
+                <p>
+                  <ul>
+                    <li class="fragment">Standards that (surprisingly) still work:
+                      <em class="fragment">SMTP, </em>
+                      <em class="fragment">HTTP...</em>
+                    </li>
+                    <li class="fragment">Standards that didn't work so well:
+                      <em class="fragment">FTP, </em>
+                      <em class="fragment">POP3, IMAP...</em>
+                    </li>
+                    <li class="fragment">The latter have been duc[kt]-taped with <em>SSL/TLS</em>:
+                      POP3S, IMAPS, FTPS...
+                    </li>
+                    <li class="fragment">Finally, some <em>standards have gained unexpected attention</em> lately, as they are <em>failing</em>:
+                    </li>
+                  </ul>
+                </p>
+                <h2 class="fragment">SSL/TLS</h2>
+                <h2 class="fragment">DNS</h2>
+                <p class="fragment"><small>...and to some extent: IPv4, TCP. And IPv6. More on this later...</small></p>
+            </section>
+
+            <section>
+                <h3>State of the art.</h3>
+                <hr />
+                <h3><em>Why all this failure?</em></h3>
+                <p>
+                  <ul>
+                    <li class="fragment">Security wasn't a main concern at the time of their design: <em>FTP, POP3...</em></li>
+                    <li class="fragment">Legacy code, algorithms, standards.<em>(Open|Libre)SSL/TLS</em></li>
+                    <li class="fragment">"If it has worked once, you won't get rid of it". <em><s>php, javascript</s> SMTP.</em></li>
+                  </ul>
+                </p>
+                <h3 class="fragment">Fortunately, new IoT standards are built with security in mind.</h3>
+                <p class="fragment"><small>...Yes, I'm pretty sure they are!...</small></p>
+            </section>
+
+            <section>
+                <h3><em>Security</em></h3>
+                <hr />
+                <h3>What are the roots of IT security?</h3>
+                <h3 class="fragment"><em>Cryptography</em></h3>
+                <p>
+                  <ul>
+                    <li class="fragment">Asymmetric cryptography preferred.</li>
+                    <li class="fragment">Strong algorithms.</li>
+                    <li class="fragment">Large cryptographic keys sizes.</li>
+                    <li class="fragment">"True" Random Number Generation</li>
+                  </ul>
+                </p>
+                <h3 class="fragment"><em>Good practices</em></h3>
+                <p>
+                  <ul>
+                    <li class="fragment">Strong passwords.</li>
+                    <li class="fragment">Multi-factor authentication.</li>
+                    <li class="fragment">Revocable Trust.</li>
+                  </ul>
+                </p>
+            </section>
+
+            <section>
+                <h3><em>Security</em></h3>
+                <hr />
+                <h3>In practice</h3>
+                <p>Let's compare two different security strategies</p>
+                <table>
+                  <tr class="fragment">
+                    <th><h4><em>Topic</em></h4></th>
+                    <th><h4>Online services</h4></th>
+                    <th><h4>Payment card</h4></th>
+                  <tr>
+                  <tr class="fragment">
+                    <td><em>Passwords</em></td>
+                    <td>8+ characters alpha, num, special</td>
+                    <td>4 digits PIN code</td>
+                  </tr>
+                  <tr class="fragment">
+                    <td><em>Cryptography</em></td>
+                    <td>Asymmetric</td>
+                    <td>Symmetric</td>
+                  </tr>
+                  <tr class="fragment">
+                    <td><em>Algorithms</em></td>
+                    <td>RSA</td>
+                    <td>DES (2TDES)</td>
+                  </tr>
+                  <tr class="fragment">
+                    <td><em>Key sizes</em></td>
+                    <td>2048, 4096</td>
+                    <td>112 (2 x 56)</td>
+                  </tr>
+                  <tr class="fragment">
+                    <td><h4>Leakage Impact</h4></td>
+                    <td class="fragment">Embarassing party pictures leakage</td>
+                    <td class="fragment"><strong>Bankrupcy, for you and your whole family</strong></td>
+                  </tr>
+                </table>
+            </section>
+
+            <!--section>
+                <section>
+                    <h2>Contexte</h2>
+                    <img data-src="res/context.svg" class="fragment roll-in" alt="Contexte">
+                    <p class="fragment">
+                        PSP: Payment Service Provider
+                    </p>
+                </section>
+
+                <section data-background="res/ascendant-bg.svg" data-background-size="60%">
+                    <h2>Objectif</h2>
+                    <p>Fournir des indicateurs</p>
+                    <ul>
+                        <li class="fragment">Distribution des paiements (# et €):
+                            <ul>
+                                <li>Par moyen de paiement</li>
+                                <li>Par status</li>
+                                <li>Par raison du refus</li>
+                            </ul>
+                        </li>
+                        <li class="fragment">Représentation des tendances:
+                            <ul>
+                                <li>Chiffre d'affaire</li>
+                                <li>Panier moyen</li>
+                                <li>Nombre de paiements</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <br/>
+                    <p class="fragment grow">en temps réel</p>
+                </section>
+            </section>
+
+            <section>
+                <section data-background="res/sql-bg.svg" data-background-size="60%">
+                    <h2>Première approche</h2>
+                    <p>Utilisation naïve du modèle relationnel existant</p>
+                    <ul>
+                        <li class="fragment">Avantages
+                            <ul>
+                                <li>Environnement existant</li>
+                                <li>Disponibilité rapide</li>
+                                <li>Outils maitrisés</li>
+                            </ul>
+                        </li>
+                        <li class="fragment">Inconvénients
+                            <ul>
+                                <li>Pré-calcul nécessaires</li>
+                                <li>Echelles prédéfinies</li>
+                                <li>Temps réel?</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+            </section>
+
+            <section>
+                <section data-background="res/time-bg.svg" data-background-size="60%">
+                    <h2>Changement d'orientation</h2>
+                    <p>Utilisation d'une TSDB (Time Series Database)</p>
+                    <ul>
+                        <li class="fragment">Avantages
+                            <ul>
+                                <li>Fait pour collecter beaucoup de valeurs</li>
+                                <li>En fonction du temps</li>
+                                <li>Accès très efficaces aux données à partir du temps</li>
+                            </ul>
+                        </li>
+                        <li class="fragment">Inconvénients
+                            <ul>
+                                <li>Généralement une valeur par échantillon temporel</li>
+                                <li>Filtrage absent ou limité</li>
+                                <li>Données souvent immuables</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+
+                <section data-background="res/time-bg.svg" data-background-size="60%">
+                    <h2>Quelques TSDB</h2>
+                    <ul>
+                        <li><a href="http://opentsdb.net">OpenTSDB</a>: requiert HBase
+                        </li>
+                        <li><a href="https://github.com/kairosdb/kairosdb">KairosDB</a>: dérive de OpenTSDB, requiert Cassandra, HBase ou H2
+                        </li>
+                        <li><a href="http://square.github.io/cube">Cube</a>: requiert MongoDB, permet modification et recherche structurée
+                        </li>
+                        <li><a href="http://influxdb.com/">InfluxDB</a>: autonome, toujours en alpha
+                        </li>
+                        <li><a href="http://graphite.wikidot.com/whisper">Whisper</a>, <a href="http://blueflood.io">BlueFlood DB</a> , <a href="http://oss.oetiker.ch/rrdtool">RRDtool</a>, <a href="https://github.com/dustin/seriesly">Seriesly </a>
+                        </li>, ...
+                    </ul>
+                </section>
+            </section>
+
+            <section>
+                <section data-background="res/search-bg.svg" data-background-size="60%">
+                    <h2>Recherche plein texte</h2>
+                    <p><q>plein texte</q> pour <q>séries temporelles</q>
+                    </p>
+                    <ul>
+                        <li class="fragment"><a href="http://lucene.apache.org/solr">Solr</a>
+                            <ul>
+                                <li>Utilisé pour recherche de transactions</li>
+                                <li>Comptages efficaces</li>
+                                <li>Modèle unidimensionnel</li>
+                                <li>Peu efficace vis à vis des montants</li>
+                            </ul>
+                        </li>
+                        <li class="fragment"><a href="http://www.elasticsearch.org/">elasticsearch</a>
+                            <ul>
+                                <li>Egalement basé sur <a href="http://lucene.apache.org/">Lucene</a>
+                                </li>
+                                <li>Modèle hiérarchique: <code>index / type / id</code>
+                                </li>
+                                <li>Depuis V1.0,
+                                    <a href="http://chrissimpson.co.uk/elasticsearch-aggregations-overview.html"> agrégations</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+
+                <section data-background="res/elastic-bg.svg" data-background-size="60%">
+                    <h2>Modèle</h2>
+                    <p>Indexation des paiements au fil de l'eau avec elasticsearch.</p>
+                    <a href="http://proxmox.lyra-network.com:9200/pay_prod/2000/9212de99-beb0-4955-bd37-b0e003737ec3?pretty"> pay_prod/2000/9212de99-beb0-4955-bd37-b0e003737ec3</a>
+                    <pre><code data-trim>
+{
+  "shop": 2,
+  "currency": 320,
+  "amount": 104092,
+  "status": "CANCELLED",
+  "card": "MC",
+  "rejectReason": "AUTO_07",
+  "date": "2014-01-28T22:47:37+00:00",
+  "domain": "lyra",
+  "contract": 1,
+  "cardCountry": "DE"
+}
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2>Vue globale</h2>
+                    <img data-src="res/global-view.svg" alt="Vue globale">
+                </section>
+
+                <section data-background="res/elastic-bg.svg" data-background-size="60%">
+                    <h2>Démonstration</h2>
+                    <p><a href="http://proxmox.lyra-network.com:9280/">Tableau de bord</a>
+                    </p>
+                    <p><a href="http://proxmox.lyra-network.com:9200/_plugin/head">Elastic Head</a>
+                    </p>
+                    <p><a href="http://proxmox.lyra-network.com:9200/_plugin/bigdesk">Elastic Bigdesk</a>
+                    </p>
+                    <p><a href="http://proxmox.lyra-network.com:9200/_plugin/HQ">Elastic HQ</a>
+                    </p>
+
+                </section>
+            </section>
+
+            <section data-background="res/like-bg.svg" data-background-size="60%">
+                <h2>Conclusion</h2>
+                <ul>
+                    <li class="fragment">Sortir des sentiers battus</li>
+                    <li class="fragment">Il reste des pistes non explorées</li>
+                    <li class="fragment">A l'avenir, il serait intéressant d'affiner la solution
+                        <ul>
+                            <li>Regrouper les données plus anciennes immuables</li>
+                            <li>Calculs approximatifs: <a href="http://www.elasticsearch.org/guide/en/elasticsearch/guide/current/_approximate_aggregations.html">approximate aggregations</a>
+                            </li>
+                            <li>Détecter cas innabituels: <a href="http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/search-aggregations-bucket-significantterms-aggregation.html">significant terms aggregation</a>
+                            </li>
+                            <li>...</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section-->
+
+            <section data-background="res/question-bg.svg" data-background-size="60%">
+                <h1>Questions?</h1>
+                <hr />
+                <p>
+                    Gregory Estrade
+                    - <a href="http://lvt.tl/">http://lvt.tl/</a>
+                </p>
+                <p>
+                    <em>@Torlus</em> on
+                    <a href="https://twitter.com/Torlus">Twitter</a>,
+                    <a href="https://github.com/Torlus">GitHub</a>.
+                </p>
+            </section>
+        </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+        // Full list of configuration options available at:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+
+            // Parallax background image
+            parallaxBackgroundImage: 'res/bg.png', // e.g. "https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg"
+
+            // Parallax background size
+            parallaxBackgroundSize: '1783px 894px', // CSS syntax, e.g. "2100px 900px" - currently only pixels are supported (don't use % or auto)
+
+
+            transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+            // Optional reveal.js plugins
+            dependencies: [
+                {
+                    src: 'lib/js/classList.js',
+                    condition: function () {
+                        return !document.body.classList;
+                    }
+                },
+                {
+                    src: 'plugin/markdown/marked.js',
+                    condition: function () {
+                        return !!document.querySelector('[data-markdown]');
+                    }
+                },
+                {
+                    src: 'plugin/markdown/markdown.js',
+                    condition: function () {
+                        return !!document.querySelector('[data-markdown]');
+                    }
+                },
+                {
+                    src: 'plugin/highlight/highlight.js',
+                    async: true,
+                    condition: function () {
+                        return !!document.querySelector('pre code');
+                    },
+                    callback: function () {
+                        hljs.initHighlightingOnLoad();
+                    }
+                },
+                {
+                    src: 'plugin/zoom-js/zoom.js',
+                    async: true
+                },
+                {
+                    src: 'plugin/notes/notes.js',
+                    async: true
+                }
+    ]
+        });
+    </script>
+
+</body>
+
+</html>
