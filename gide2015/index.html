@@ -273,8 +273,8 @@ Autonomous Decentralized Peer-to-Peer Telemetry
                 <p>
                   <ul>
                     <li class="fragment">A <em>Blockchain</em> stores the full list of <em>User Handles</em>.</li>
-                    <li class="fragment"><em>User profile</em> is stored in a <em>DHT</em> (Kademlia).</li>
-                    <li class="fragment"><em>Posts</em> are stored in BitTorrent <em>swarms</em>.</li>
+                    <li class="fragment"><em>User profiles</em> are stored in a <em>DHT</em> (Kademlia).</li>
+                    <li class="fragment"><em>Posts</em> are stored within <em>BitTorrent swarms</em>.</li>
                     <li class="fragment"><em>DMs</em> are encrypted, other messages are not.</li>
                   </ul>
                 </p>
@@ -285,7 +285,7 @@ Autonomous Decentralized Peer-to-Peer Telemetry
               <p>
                 <hr />
                 <h4>Mapping into <em>MQTT</em> concepts</h4>
-                <small>...and adressing security and privacy as well, while we're at it...</small>
+                <small>...and addressing security and privacy as well, while we're at it...</small>
                 <p>
                   <ul>
                     <li class="fragment">A <em>Handle</em> is used instead of a <strong>Domain Name</strong>.</li>
@@ -306,11 +306,11 @@ Autonomous Decentralized Peer-to-Peer Telemetry
                 <p>
                   <ul>
                     <li class="fragment"><em>Secret sharing</em>.
-                      <p><q>Secret keys are hard to protect. Storing a key into a device makes it a <strong>SPOF</strong>, so let's <em>split</em> the key into parts and store those parts across <em>multiple</em> devices...</q></p>
+                      <p>Secret keys are hard to protect. Storing a key into a device makes it a <strong>SPOF</strong>, so let's <em>split</em> the key into parts and store those parts across <em>multiple</em> devices... Hint: <a href="http://point-at-infinity.org/ssss/">ssss</a>.</p>
                     </li>
                     <li class="fragment"><em>Adaptive security</em>.
-                      <p><q>NFC payments are prone to errors, but limited to a maximum amount. It's a matter of <strong>risk</strong> versus <strong>consequences</strong>.
-                        Let's extend this principle to give a <em>proper response</em> to a given situation, using <em>Quorum</em>.</q></p>
+                      <p>NFC payments are prone to errors, but limited to a maximum amount. It's a matter of <strong>risk</strong> versus <strong>consequences</strong>.
+                        Let's extend this principle to give a <em>proper response</em> to a given situation, using a <em>Quorum</em>.</p>
                     </li>
                   </ul>
                 </p>
@@ -326,11 +326,11 @@ Autonomous Decentralized Peer-to-Peer Telemetry
                 <p>
                   <ul>
                     <li class="fragment"><em>Cryptography and low-end devices</em>.
-                      <p><q>Cryptography is costly. Do we need strong cryptography, when EFT standards still use <strong>DES</strong> (2-TDES, <strong>112-bit</strong> key length) ?</q></p>
+                      <p>Cryptography is costly. Do we need strong cryptography, when EFT standards still use <strong>DES</strong> (2-TDES, <strong>112-bit</strong> key length) ? Hint: <a href="http://en.wikipedia.org/wiki/Derived_unique_key_per_transaction">DUKPT</a>.</p>
                     </li>
                     <li class="fragment"><em>Blockchain and incentive issues</em>.
-                      <p><q>Blockchains quickly become <strong>huge</strong>. Would a <em>distributed Blockchain storage</em> be possible or relevant? What about integrity? Use another Blockchain for this purpose ?</q></p>
-                      <p><q>Generally speaking, what would be good <em>incentives</em> for non-cryptocurrencies-related Blockchains ? Example: <a href="https://okturtles.com/">DNSChain</a></q></p>
+                      <p>Blockchains quickly become <strong>huge</strong>. Would a <em>distributed Blockchain storage</em> be possible or relevant? What about integrity? Use another Blockchain for this purpose ?</p>
+                      <p>Generally speaking, what would be good <em>incentives</em> for non-cryptocurrencies-related Blockchains ? Example: <a href="https://okturtles.com/">DNSChain</a>.</p>
                     </li>
                   </ul>
                 </p>
@@ -449,7 +449,7 @@ Autonomous Decentralized Peer-to-Peer Telemetry
             center: true,
 
             // Parallax background image
-            parallaxBackgroundImage: 'res/bg.png', // e.g. "https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg"
+            parallaxBackgroundImage: 'res/bg_dark.png', // e.g. "https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg"
 
             // Parallax background size
             parallaxBackgroundSize: '1783px 894px', // CSS syntax, e.g. "2100px 900px" - currently only pixels are supported (don't use % or auto)
