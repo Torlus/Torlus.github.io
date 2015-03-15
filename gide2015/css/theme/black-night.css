@@ -73,7 +73,7 @@ body {
 
 .reveal h4 {
     font-size: 1.22em;
-    color: #88f;
+    color: #bbf;
 }
 
 .reveal h1 {
@@ -186,6 +186,7 @@ body {
 }
 
 .reveal code {
+    color: #99f;
     font-family: monospace;
 }
 

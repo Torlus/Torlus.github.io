@@ -55,88 +55,290 @@
                 </p>
             </section>
 
-            <section>
-                <h3><em>OLD</em> is <em>NEW</em> again.</h3>
+            <!--section>
+                <h3>Identity, Security and Privacy</h3>
                 <hr />
-                <img data-src="res/c64.png" alt="c64" height="300px" />
-                <h2 class="fragment"><a href="http://www.contiki-os.org/">Contiki</a></h2>
-                <p>
-                    <ul class="fragment">
-                        <li><em>THEN (2002):</em> connecting old hardware to Internet.</li>
-                        <li><em>NOW:</em> a complete OS for the IoT: 6LoWPAN, RPL, CoAP.</li>
-                    </ul>
-                </p>
-            </section>
+                <h4>State of the art</h4>
+                <div>
+                  <p>Identity, Security and Privacy are</p>
+                  <ul>
+                    <li><em>Identity</em> and <em>Privacy</em> cannot be ensured without <em>Security</em>.</li>
+                    <li>Many security-related services rely on <em>Trust</em>: <strong>DNS, SSL/TLS</strong>.</li>
+                    <li>For these services, a <strong>Hierarchical Trust Model</strong> is used.</li>
+                  </ul>
+                </div>
+            </section-->
 
             <section>
-                <h3><em>OLD</em> is <em>NEW</em> again.</h3>
-                <hr />
-                <h3>Hardware-wise</h3>
+              <h3>IoT - State of the art</h3>
+              <hr />
+              <div class="fragment">
+                <h4>Popular IoT applications</h4>
                 <p>
                 <ul>
-                    <li>Processors: from <em>GHz</em> to <em>MHz</em>.</li>
-                    <li>Storage: from <em>GB</em> to <em>MB</em>, <em>KB</em>.</li>
-                    <li>Networking: from <em>Mb</em> to <em>Kb</em>.</li>
+                  <li><em>Home automation</em>, Smart cities.</li>
+                  <li>Wearables, Healthcare, Automotive...</li>
                 </ul>
                 </p>
+              </div>
+              <div class="fragment">
+                <h4>Popular IoT protocols and standards</h4>
                 <p>
-                <h3>Software-wise</h3>
                 <ul>
-                    <li><a href="http://xmpp.org/">XMPP</a>: 1999 (Jabber).</li>
-                    <li><a href="http://mqtt.org/">MQTT</a>: 1999.</li>
-                    <li><a href="http://www.amqp.org/">AMQP</a>: 2003.</li>
+                  <li>Application level: <em>MQTT</em>, XMPP, AMQP. CoAP.</li>
+                  <li>Networking level: 6LoWPAN, RPL. DTLS.</li>
                 </ul>
                 </p>
+              </div>
+              <div class="fragment">
+                <hr />
+                <h3>Focus of this talk</h3>
+                <h4><em>Home automation</em> using <em>MQTT</em></h4>
+              </div>
             </section>
 
             <section>
-                <h3><em>OLD</em> is <em>NEW</em> again.</h3>
-                <hr />
-                <img data-src="res/bttf.jpg" alt="bttf" height="500px" />
+              <h3>Home automation using MQTT</h3>
+              <hr />
+              <h4>A quick <em>MQTT</em> overview</h4>
+              <p>
+              <ul>
+                <li><em>MQTT</em> is based on a <em>pub</em>lisher/<em>sub</em>scriber model.</li>
+                <li>MQTT clients use <em>TCP/IP</em> to connect to a <em>Broker</em>.</li>
+                <li><em>Brokers</em> perform <em>message-passing</em> between clients and can usually be chained in a <em>hierarchical</em> way.</li>
+                <li>There is a <em>MQTT-SN</em> specification for low-end devices.</li>
+              </ul>
+              </p>
             </section>
 
             <section>
-                <h3>State of the art.</h3>
+              <h3>Home automation using MQTT</h3>
+              <hr />
+              <div class="fragment">
+              <p>
+              <h4>Architecture basics</h4>
+              <ul>
+                <li>Sensors: <code>room/temperature</code>, <code>outside/humidity</code>.</li>
+                <li>Commands: <code>room/radiator</code>, <code>garage/door</code>.</li>
+                <li>All devices are using a <em>MQTT broker</em> connected to Internet.</li>
+              </ul>
+              </p>
+              </div>
+
+              <div class="fragment">
+              <p>
+              <h4>Privacy requirements</h4>
+              <ul>
+                <li>Some data may be shared publicly: <code>outside/humidity</code>.</li>
+                <li>Some data may be shared to a trusted set of people or systems:
+                  <code>garage/door</code>, <code>room/temperature</code>.</li>
+                <li>Some commands need to be protected: <code>room/radiator</code>.</li>
+                <li>Some commands need to be <strong>secure</strong>: <code>garage/door</code>.
+                  A <strong>2FA</strong> would be a <em>good thing</em>.</li>
+              </ul>
+              </p>
+              </div>
+            </section>
+
+            <section>
+              <h3>Home automation using MQTT</h3>
+              <hr />
+              <div class="fragment">
+              <p>
+              <h4>Connecting our home to the IoT</h4>
+              <ul>
+                <li>Naming: <code><strong>my_home.domain.name</strong>/&lt;location&gt;/&lt;device&gt;</code>.</li>
+                <li>Security: <strong>SSL/TLS</strong> required for MQTT requests from Internet.</li>
+              </ul>
+              </p>
+              </div>
+
+              <h3 class="fragment"><em>Well, it was easy, wasn't it?</em></h3>
+              <h3 class="fragment">End of the story?</h3>
+              <h1 class="fragment"><strong>.NOPE.</strong></h1>
+
+            </section>
+
+
+            <section>
+                <h3><strong>DNS</strong> and <strong>SSL/TLS</strong> concerns</h3>
                 <hr />
-                <h3><em>Standards and protocols</em></h3>
+                <div class="fragment">
+                <p>
+                  <h4>Threats on <strong>DNS</strong></h4>
+                      <ul>
+                        <li><a href="http://en.wikipedia.org/wiki/Distributed_denial_of_service_attacks_on_root_nameservers">DDoS on root servers (2002, 2007)</a>.</li>
+                        <li><a href="http://bcn.boulder.co.us/~neal/ietf/verisign-abuse.html">Verisign (2003)</a>, ISPs and governements <strong>abuses</strong>.</li>
+                        <li><a href="http://www.sans.org/reading-room/whitepapers/dns/security-issues-dns-1069">Protocol weakness</a>: spoofing, cache poisoning...</li>
+                      </ul>
+                </p>
+                </div>
+
+                <div class="fragment">
+                <p>
+                  <h4>Issues with <strong>SSL/TLS</strong></h4>
+                      <ul>
+                        <li>Implementation issues: <a href="http://heartbleed.com/">Heartbleed</a>, <a href="https://www.openssl.org/~bodo/ssl-poodle.pdf">Poodle</a>.</li>
+                        <li><a href="http://support.lenovo.com/en/product_security/superfish">Lenovo's SuperFish</a> <strong>abuse</strong>.</li>
+                        <li>Cryptography: <a href="https://www.debian.org/security/2008/dsa-1571">Debian RNG bug (2008)</a>, <a href="http://kukuruku.co/hub/infosec/backdoor-in-a-public-rsa-key">RSA key backdoor</a>.</li>
+                      </ul>
+                </p>
+                </div>
+
+                <h3 class="fragment">
+                  <strong>Both share the same <u><i>usage flaw</i></u>.</strong>
+                </h3>
+            </section>
+
+            <section data-background="res/xfiles.jpg">
+                <div class="fragment">
+                <h1>&nbsp;</h1>
+                <h1><strong>Hierarchical</strong></h1>
+                <h1><em>Trust Model</em></h1>
+                </div>
+            </section>
+
+            <section>
+              <h2>Enter the <em>Blockchain</em></h2>
+              <hr />
+              <div class="fragment">
+              <p>
+              <h4>The Blockchain</h4>
+              <ul>
+                <li>Made famous by <em>cryptocurrencies</em>, especially <em>Bitcoin</em>.</li>
+                <li>In cryptocurrencies, acts as a <em>ledger</em> for <em>transactions</em>.</li>
+                <li>Integrity is ensured by the <em>network</em>. No <strong>SPOF</strong>.</li>
+              </ul>
+              </p>
+              </div>
+
+              <div class="fragment">
+              <p>
+              <h4>Why does it work?</h4>
+              <ul>
+                <li class="fragment">The <em>mining</em> process <em>rewards</em> people for maintaining the ledger's <em>integrity</em>. Mining is <em>computational power-hungry</em>.</li>
+                <li class="fragment">In cryptocurrencies, <em>everyone</em> in the network is <em>motivated</em> by the same <em>incentive</em>, i.e. getting money.</li>
+                <li class="fragment">It works because <strong>everyone is a bit greedy</strong> and that the "silent majority" outperforms the "few villains".</li>
+              </ul>
+              </p>
+              </div>
+            </section>
+
+
+            <section>
+              <p><small>It looks like a very negative view of human nature, but...</small></p>
+              <h1><em>TRUST</em> < <strong>GREED</strong></h1>
+              <img data-src="res/greed.jpg" height="300" />
+              <p><small>History has proven that relying on the "good will" of a few ones, just doesn't work.</small></p>
+            </section>
+
+            <section>
+              <h3>Decentralization matters</em></h3>
+              <hr />
+              <div>
+              <p>
+              <p class="fragment">Yes, all that stuff looks interesting, in theory at least...</p>
+              <h3 class="fragment"><strong>But who cares ?</strong></h3>
+              </p>
+              </div>
+
+              <div class="fragment">
+              <p>
+                <h4>January 2015 - <em>IBM</em> and <em>Samsung</em> unveil <em>ADEPT</em></h4>
+                <h5><em>
+Autonomous Decentralized Peer-to-Peer Telemetry
+                </em></h5>
+                Using a <em>Blockchain</em> with <a href="https://www.ethereum.org/">Ethereum</a>,
+                <a href="http://telehash.org/">Telehash</a> for communication, and <a href="http://www.bittorrent.com/">BitTorrent</a>.
+              </p>
+              </div>
+
+              <div class="fragment">
+              <p>
+                <hr />
+                <p>However, nearly 8 months ago... <a href="https://github.com/Torlus/mosquitto-twister">Mosquitto-Twister</a></p>
+                <q>Proof-of-concept of a fully distributed MQTT broker for the IoT. Uses Twister platform, Bitcoin and Bittorrent protocols.</q>
+                <a href="https://github.com/Torlus/mosquitto-twister">https://github.com/Torlus/mosquitto-twister</a>
+              </p>
+              </div>
+            </section>
+
+            <section>
+              <h3>How does it work?</em></h3>
+              <hr />
+              <div class="fragment">
+              <p>
+                <h4>The <a href="http://twister.net.co/">Twister</a> platorm</h4>
+                <p><em>Twister</em> is a fully decentralized <em>Twitter</em> clone.</p>
                 <p>
                   <ul>
-                    <li class="fragment">Standards that (surprisingly) still work:
-                      <em class="fragment">SMTP, </em>
-                      <em class="fragment">HTTP...</em>
+                    <li class="fragment">A <em>Blockchain</em> stores the full list of <em>User Handles</em>.</li>
+                    <li class="fragment"><em>User profile</em> is stored in a <em>DHT</em> (Kademlia).</li>
+                    <li class="fragment"><em>Posts</em> are stored in BitTorrent <em>swarms</em>.</li>
+                    <li class="fragment"><em>DMs</em> are encrypted, other messages are not.</li>
+                  </ul>
+                </p>
+              </p>
+              </div>
+
+              <div class="fragment">
+              <p>
+                <hr />
+                <h4>Mapping into <em>MQTT</em> concepts</h4>
+                <small>...and adressing security and privacy as well, while we're at it...</small>
+                <p>
+                  <ul>
+                    <li class="fragment">A <em>Handle</em> is used instead of a <strong>Domain Name</strong>.</li>
+                    <li class="fragment"><em>MQTT's pub/sub model</em> fits nicely with Twi[st]ter's one.</li>
+                  </ul>
+                </p>
+              </p>
+              </div>
+            </section>
+
+
+            <section>
+              <h3>Now, what?</em></h3>
+              <hr />
+              <div class="fragment">
+              <p>
+                <h5 class="fragment">Here is some food for thought (and the Q &amp; A session):</h5>
+                <p>
+                  <ul>
+                    <li class="fragment"><em>Secret sharing</em>.
+                      <p><q>Secret keys are hard to protect. Storing a key into a device makes it a <strong>SPOF</strong>, so let's <em>split</em> the key into parts and store those parts across <em>multiple</em> devices...</q></p>
                     </li>
-                    <li class="fragment">Standards that didn't work so well:
-                      <em class="fragment">FTP, </em>
-                      <em class="fragment">POP3, IMAP...</em>
-                    </li>
-                    <li class="fragment">The latter have been duc[kt]-taped with <em>SSL/TLS</em>:
-                      POP3S, IMAPS, FTPS...
-                    </li>
-                    <li class="fragment">Finally, some <em>standards have gained unexpected attention</em> lately, as they are <em>failing</em>:
+                    <li class="fragment"><em>Adaptive security</em>.
+                      <p><q>NFC payments are prone to errors, but limited to a maximum amount. It's a matter of <strong>risk</strong> versus <strong>consequences</strong>.
+                        Let's extend this principle to give a <em>proper response</em> to a given situation, using <em>Quorum</em>.</q></p>
                     </li>
                   </ul>
                 </p>
-                <h2 class="fragment">SSL/TLS</h2>
-                <h2 class="fragment">DNS</h2>
-                <p class="fragment"><small>...and to some extent: IPv4, TCP. And IPv6. More on this later...</small></p>
+              </p>
+              </div>
             </section>
 
             <section>
-                <h3>State of the art.</h3>
-                <hr />
-                <h3><em>Why all this failure?</em></h3>
+              <h3>Now, what?</em></h3>
+              <hr />
+              <div>
+              <p>
                 <p>
                   <ul>
-                    <li class="fragment">Security wasn't a main concern at the time of their design: <em>FTP, POP3...</em></li>
-                    <li class="fragment">Legacy code, algorithms, standards.<em>(Open|Libre)SSL/TLS</em></li>
-                    <li class="fragment">"If it has worked once, you won't get rid of it". <em><s>php, javascript</s> SMTP.</em></li>
+                    <li class="fragment"><em>Cryptography and low-end devices</em>.
+                      <p><q>Cryptography is costly. Do we need strong cryptography, when EFT standards still use <strong>DES</strong> (2-TDES, <strong>112-bit</strong> key length) ?</q></p>
+                    </li>
+                    <li class="fragment"><em>Blockchain and incentive issues</em>.
+                      <p><q>Blockchains quickly become <strong>huge</strong>. Would a <em>distributed Blockchain storage</em> be possible or relevant? What about integrity? Use another Blockchain for this purpose ?</q></p>
+                      <p><q>Generally speaking, what would be good <em>incentives</em> for non-cryptocurrencies-related Blockchains ? Example: <a href="https://okturtles.com/">DNSChain</a></q></p>
+                    </li>
                   </ul>
                 </p>
-                <h3 class="fragment">Fortunately, new IoT standards are built with security in mind.</h3>
-                <p class="fragment"><small>...Yes, I'm pretty sure they are!...</small></p>
+              </p>
+              </div>
             </section>
 
-            <section>
+            <!--section>
                 <h3><em>Security</em></h3>
                 <hr />
                 <h3>What are the roots of IT security?</h3>
@@ -146,7 +348,6 @@
                     <li class="fragment">Asymmetric cryptography preferred.</li>
                     <li class="fragment">Strong algorithms.</li>
                     <li class="fragment">Large cryptographic keys sizes.</li>
-                    <li class="fragment">"True" Random Number Generation</li>
                   </ul>
                 </p>
                 <h3 class="fragment"><em>Good practices</em></h3>
@@ -154,7 +355,8 @@
                   <ul>
                     <li class="fragment">Strong passwords.</li>
                     <li class="fragment">Multi-factor authentication.</li>
-                    <li class="fragment">Revocable Trust.</li>
+                    <li class="fragment"><em>Cryptographic key management.</em></li>
+                    <li class="fragment"><em>Cryptographic key erosion prevention.</em></li>
                   </ul>
                 </p>
             </section>
@@ -168,7 +370,7 @@
                   <tr class="fragment">
                     <th><h4><em>Topic</em></h4></th>
                     <th><h4>Online services</h4></th>
-                    <th><h4>Payment card</h4></th>
+                    <th><h4>Payment cards</h4></th>
                   <tr>
                   <tr class="fragment">
                     <td><em>Passwords</em></td>
@@ -182,7 +384,7 @@
                   </tr>
                   <tr class="fragment">
                     <td><em>Algorithms</em></td>
-                    <td>RSA</td>
+                    <td>RSA, AES</td>
                     <td>DES (2TDES)</td>
                   </tr>
                   <tr class="fragment">
@@ -191,191 +393,31 @@
                     <td>112 (2 x 56)</td>
                   </tr>
                   <tr class="fragment">
-                    <td><h4>Leakage Impact</h4></td>
+                    <td><h4>Failure Impact</h4></td>
                     <td class="fragment">Embarassing party pictures leakage</td>
                     <td class="fragment"><strong>Bankrupcy, for you and your whole family</strong></td>
                   </tr>
                 </table>
-            </section>
+            </section-->
 
             <!--section>
-                <section>
-                    <h2>Contexte</h2>
-                    <img data-src="res/context.svg" class="fragment roll-in" alt="Contexte">
-                    <p class="fragment">
-                        PSP: Payment Service Provider
-                    </p>
-                </section>
-
-                <section data-background="res/ascendant-bg.svg" data-background-size="60%">
-                    <h2>Objectif</h2>
-                    <p>Fournir des indicateurs</p>
-                    <ul>
-                        <li class="fragment">Distribution des paiements (# et €):
-                            <ul>
-                                <li>Par moyen de paiement</li>
-                                <li>Par status</li>
-                                <li>Par raison du refus</li>
-                            </ul>
-                        </li>
-                        <li class="fragment">Représentation des tendances:
-                            <ul>
-                                <li>Chiffre d'affaire</li>
-                                <li>Panier moyen</li>
-                                <li>Nombre de paiements</li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <br/>
-                    <p class="fragment grow">en temps réel</p>
-                </section>
-            </section>
-
-            <section>
-                <section data-background="res/sql-bg.svg" data-background-size="60%">
-                    <h2>Première approche</h2>
-                    <p>Utilisation naïve du modèle relationnel existant</p>
-                    <ul>
-                        <li class="fragment">Avantages
-                            <ul>
-                                <li>Environnement existant</li>
-                                <li>Disponibilité rapide</li>
-                                <li>Outils maitrisés</li>
-                            </ul>
-                        </li>
-                        <li class="fragment">Inconvénients
-                            <ul>
-                                <li>Pré-calcul nécessaires</li>
-                                <li>Echelles prédéfinies</li>
-                                <li>Temps réel?</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </section>
-            </section>
-
-            <section>
-                <section data-background="res/time-bg.svg" data-background-size="60%">
-                    <h2>Changement d'orientation</h2>
-                    <p>Utilisation d'une TSDB (Time Series Database)</p>
-                    <ul>
-                        <li class="fragment">Avantages
-                            <ul>
-                                <li>Fait pour collecter beaucoup de valeurs</li>
-                                <li>En fonction du temps</li>
-                                <li>Accès très efficaces aux données à partir du temps</li>
-                            </ul>
-                        </li>
-                        <li class="fragment">Inconvénients
-                            <ul>
-                                <li>Généralement une valeur par échantillon temporel</li>
-                                <li>Filtrage absent ou limité</li>
-                                <li>Données souvent immuables</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </section>
-
-                <section data-background="res/time-bg.svg" data-background-size="60%">
-                    <h2>Quelques TSDB</h2>
-                    <ul>
-                        <li><a href="http://opentsdb.net">OpenTSDB</a>: requiert HBase
-                        </li>
-                        <li><a href="https://github.com/kairosdb/kairosdb">KairosDB</a>: dérive de OpenTSDB, requiert Cassandra, HBase ou H2
-                        </li>
-                        <li><a href="http://square.github.io/cube">Cube</a>: requiert MongoDB, permet modification et recherche structurée
-                        </li>
-                        <li><a href="http://influxdb.com/">InfluxDB</a>: autonome, toujours en alpha
-                        </li>
-                        <li><a href="http://graphite.wikidot.com/whisper">Whisper</a>, <a href="http://blueflood.io">BlueFlood DB</a> , <a href="http://oss.oetiker.ch/rrdtool">RRDtool</a>, <a href="https://github.com/dustin/seriesly">Seriesly </a>
-                        </li>, ...
-                    </ul>
-                </section>
-            </section>
-
-            <section>
-                <section data-background="res/search-bg.svg" data-background-size="60%">
-                    <h2>Recherche plein texte</h2>
-                    <p><q>plein texte</q> pour <q>séries temporelles</q>
-                    </p>
-                    <ul>
-                        <li class="fragment"><a href="http://lucene.apache.org/solr">Solr</a>
-                            <ul>
-                                <li>Utilisé pour recherche de transactions</li>
-                                <li>Comptages efficaces</li>
-                                <li>Modèle unidimensionnel</li>
-                                <li>Peu efficace vis à vis des montants</li>
-                            </ul>
-                        </li>
-                        <li class="fragment"><a href="http://www.elasticsearch.org/">elasticsearch</a>
-                            <ul>
-                                <li>Egalement basé sur <a href="http://lucene.apache.org/">Lucene</a>
-                                </li>
-                                <li>Modèle hiérarchique: <code>index / type / id</code>
-                                </li>
-                                <li>Depuis V1.0,
-                                    <a href="http://chrissimpson.co.uk/elasticsearch-aggregations-overview.html"> agrégations</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </section>
-
-                <section data-background="res/elastic-bg.svg" data-background-size="60%">
-                    <h2>Modèle</h2>
-                    <p>Indexation des paiements au fil de l'eau avec elasticsearch.</p>
-                    <a href="http://proxmox.lyra-network.com:9200/pay_prod/2000/9212de99-beb0-4955-bd37-b0e003737ec3?pretty"> pay_prod/2000/9212de99-beb0-4955-bd37-b0e003737ec3</a>
-                    <pre><code data-trim>
-{
-  "shop": 2,
-  "currency": 320,
-  "amount": 104092,
-  "status": "CANCELLED",
-  "card": "MC",
-  "rejectReason": "AUTO_07",
-  "date": "2014-01-28T22:47:37+00:00",
-  "domain": "lyra",
-  "contract": 1,
-  "cardCountry": "DE"
-}
-                    </code></pre>
-                </section>
-
-                <section>
-                    <h2>Vue globale</h2>
-                    <img data-src="res/global-view.svg" alt="Vue globale">
-                </section>
-
-                <section data-background="res/elastic-bg.svg" data-background-size="60%">
-                    <h2>Démonstration</h2>
-                    <p><a href="http://proxmox.lyra-network.com:9280/">Tableau de bord</a>
-                    </p>
-                    <p><a href="http://proxmox.lyra-network.com:9200/_plugin/head">Elastic Head</a>
-                    </p>
-                    <p><a href="http://proxmox.lyra-network.com:9200/_plugin/bigdesk">Elastic Bigdesk</a>
-                    </p>
-                    <p><a href="http://proxmox.lyra-network.com:9200/_plugin/HQ">Elastic HQ</a>
-                    </p>
-
-                </section>
-            </section>
-
-            <section data-background="res/like-bg.svg" data-background-size="60%">
-                <h2>Conclusion</h2>
-                <ul>
-                    <li class="fragment">Sortir des sentiers battus</li>
-                    <li class="fragment">Il reste des pistes non explorées</li>
-                    <li class="fragment">A l'avenir, il serait intéressant d'affiner la solution
-                        <ul>
-                            <li>Regrouper les données plus anciennes immuables</li>
-                            <li>Calculs approximatifs: <a href="http://www.elasticsearch.org/guide/en/elasticsearch/guide/current/_approximate_aggregations.html">approximate aggregations</a>
-                            </li>
-                            <li>Détecter cas innabituels: <a href="http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/search-aggregations-bucket-significantterms-aggregation.html">significant terms aggregation</a>
-                            </li>
-                            <li>...</li>
-                        </ul>
+                <h3><em>Security</em></h3>
+                <hr />
+                <h3>Wait... what? Is EFT security <strong>that</strong> bad???</h3>
+                <p>
+                  <h4 class="fragment">Fortunately not:</h4>
+                  <ul>
+                    <li class="fragment">Strong <strong>key management</strong> scheme:
+                      <p class="fragment"><em>LMK</em> stored in HSM/Secure Elements,</p>
+                      <p class="fragment"><em>KEK</em> used for transport.</p>
+                      <p class="fragment">Keys are splitted into two or more parts.</p>
                     </li>
-                </ul>
+                    <li class="fragment"><strong>Key derivation</strong> schemes<em> (DUKPT) </em>:
+                      <p class="fragment"><em>BDK, IPEK</em> are never exposed,</p>
+                      <p class="fragment"><em>Session Keys</em> are used only <em>once</em> (KSN).</p>
+                    </li>
+                  </ul>
+                </p>
             </section-->
 
             <section data-background="res/question-bg.svg" data-background-size="60%">
