@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Identity, Security and Privacy in the IoT era.</title>
+
+    <meta name="description" content="Identity, Security and Privacy in the IoT era.">
+    <meta name="author" content="Gregory Estrade">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black-night.css" id="theme">
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+
+    <!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+
+    <div class="reveal">
+
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+            <section>
+                <h3>Identity, Security and Privacy</h3>
+                <h2><em>in the IoT era</em></h2>
+                <hr />
+                <p>
+                    Gregory Estrade
+                    - <a href="http://lvt.tl/">http://lvt.tl/</a>
+                </p>
+                <p>
+                    <em>@Torlus</em> on
+                    <a href="https://twitter.com/Torlus">Twitter</a>,
+                    <a href="https://github.com/Torlus">GitHub</a>.
+                </p>
+            </section>
+
+            <!--section>
+                <h3>Identity, Security and Privacy</h3>
+                <hr />
+                <h4>State of the art</h4>
+                <div>
+                  <p>Identity, Security and Privacy are</p>
+                  <ul>
+                    <li><em>Identity</em> and <em>Privacy</em> cannot be ensured without <em>Security</em>.</li>
+                    <li>Many security-related services rely on <em>Trust</em>: <strong>DNS, SSL/TLS</strong>.</li>
+                    <li>For these services, a <strong>Hierarchical Trust Model</strong> is used.</li>
+                  </ul>
+                </div>
+            </section-->
+
+            <section>
+              <h3>IoT - State of the art</h3>
+              <hr />
+              <div class="fragment">
+                <h4>Popular IoT applications</h4>
+                <p>
+                <ul>
+                  <li><em>Home automation</em>, Smart cities.</li>
+                  <li>Wearables, Healthcare, Automotive...</li>
+                </ul>
+                </p>
+              </div>
+              <div class="fragment">
+                <h4>Popular IoT protocols and standards</h4>
+                <p>
+                <ul>
+                  <li>Application level: <em>MQTT</em>, XMPP, AMQP. CoAP.</li>
+                  <li>Networking level: 6LoWPAN, RPL. DTLS.</li>
+                </ul>
+                </p>
+              </div>
+              <div class="fragment">
+                <hr />
+                <h3>Focus of this talk</h3>
+                <h4><em>Home automation</em> using <em>MQTT</em></h4>
+              </div>
+            </section>
+
+            <section>
+              <h3>Home automation using MQTT</h3>
+              <hr />
+              <h4>A quick <em>MQTT</em> overview</h4>
+              <p>
+              <ul>
+                <li><em>MQTT</em> is based on a <em>pub</em>lisher/<em>sub</em>scriber model.</li>
+                <li>MQTT clients use <em>TCP/IP</em> to connect to a <em>Broker</em>.</li>
+                <li><em>Brokers</em> perform <em>message-passing</em> between clients and can usually be chained in a <em>hierarchical</em> way.</li>
+                <li>There is a <em>MQTT-SN</em> specification for low-end devices.</li>
+              </ul>
+              </p>
+            </section>
+
+            <section>
+              <h3>Home automation using MQTT</h3>
+              <hr />
+              <div class="fragment">
+              <p>
+              <h4>Architecture basics</h4>
+              <ul>
+                <li>Sensors: <code>room/temperature</code>, <code>outside/humidity</code>.</li>
+                <li>Commands: <code>room/radiator</code>, <code>garage/door</code>.</li>
+                <li>All devices are using a <em>MQTT broker</em> connected to Internet.</li>
+              </ul>
+              </p>
+              </div>
+
+              <div class="fragment">
+              <p>
+              <h4>Privacy requirements</h4>
+              <ul>
+                <li>Some data may be shared publicly: <code>outside/humidity</code>.</li>
+                <li>Some data may be shared to a trusted set of people or systems:
+                  <code>garage/door</code>, <code>room/temperature</code>.</li>
+                <li>Some commands need to be protected: <code>room/radiator</code>.</li>
+                <li>Some commands need to be <strong>secure</strong>: <code>garage/door</code>.
+                  A <strong>2FA</strong> would be a <em>good thing</em>.</li>
+              </ul>
+              </p>
+              </div>
+            </section>
+
+            <section>
+              <h3>Home automation using MQTT</h3>
+              <hr />
+              <div class="fragment">
+              <p>
+              <h4>Connecting our home to the IoT</h4>
+              <ul>
+                <li>Naming: <code><strong>my_home.domain.name</strong>/&lt;location&gt;/&lt;device&gt;</code>.</li>
+                <li>Security: <strong>SSL/TLS</strong> required for MQTT requests from Internet.</li>
+              </ul>
+              </p>
+              </div>
+
+              <h3 class="fragment"><em>Well, it was easy, wasn't it?</em></h3>
+              <h3 class="fragment">End of the story?</h3>
+              <h1 class="fragment"><strong>.NOPE.</strong></h1>
+
+            </section>
+
+
+            <section>
+                <h3><strong>DNS</strong> and <strong>SSL/TLS</strong> concerns</h3>
+                <hr />
+                <div class="fragment">
+                <p>
+                  <h4>Threats on <strong>DNS</strong></h4>
+                      <ul>
+                        <li><a href="http://en.wikipedia.org/wiki/Distributed_denial_of_service_attacks_on_root_nameservers">DDoS on root servers (2002, 2007)</a>.</li>
+                        <li><a href="http://bcn.boulder.co.us/~neal/ietf/verisign-abuse.html">Verisign (2003)</a>, ISPs and governements <strong>abuses</strong>.</li>
+                        <li><a href="http://www.sans.org/reading-room/whitepapers/dns/security-issues-dns-1069">Protocol weakness</a>: spoofing, cache poisoning...</li>
+                      </ul>
+                </p>
+                </div>
+
+                <div class="fragment">
+                <p>
+                  <h4>Issues with <strong>SSL/TLS</strong></h4>
+                      <ul>
+                        <li>Implementation issues: <a href="http://heartbleed.com/">Heartbleed</a>, <a href="https://www.openssl.org/~bodo/ssl-poodle.pdf">Poodle</a>.</li>
+                        <li><a href="http://support.lenovo.com/en/product_security/superfish">Lenovo's SuperFish</a> <strong>abuse</strong>.</li>
+                        <li>Cryptography: <a href="https://www.debian.org/security/2008/dsa-1571">Debian RNG bug (2008)</a>, <a href="http://kukuruku.co/hub/infosec/backdoor-in-a-public-rsa-key">RSA key backdoor</a>.</li>
+                      </ul>
+                </p>
+                </div>
+
+                <h3 class="fragment">
+                  <strong>Both share the same <u><i>usage flaw</i></u>.</strong>
+                </h3>
+            </section>
+
+            <section data-background="res/xfiles.jpg">
+                <div class="fragment">
+                <h1>&nbsp;</h1>
+                <h1><strong>Hierarchical</strong></h1>
+                <h1><em>Trust Model</em></h1>
+                </div>
+            </section>
+
+            <section>
+              <h2>Enter the <em>Blockchain</em></h2>
+              <hr />
+              <div class="fragment">
+              <p>
+              <h4>The Blockchain</h4>
+              <ul>
+                <li>Made famous by <em>cryptocurrencies</em>, especially <em>Bitcoin</em>.</li>
+                <li>In cryptocurrencies, acts as a <em>ledger</em> for <em>transactions</em>.</li>
+                <li>Integrity is ensured by the <em>network</em>. No <strong>SPOF</strong>.</li>
+              </ul>
+              </p>
+              </div>
+
+              <div class="fragment">
+              <p>
+              <h4>Why does it work?</h4>
+              <ul>
+                <li class="fragment">The <em>mining</em> process <em>rewards</em> people for maintaining the ledger's <em>integrity</em>. Mining is <em>computational power-hungry</em>.</li>
+                <li class="fragment">In cryptocurrencies, <em>everyone</em> in the network is <em>motivated</em> by the same <em>incentive</em>, i.e. getting money.</li>
+                <li class="fragment">It works because <strong>everyone is a bit greedy</strong> and that the "silent majority" outperforms the "few villains".</li>
+              </ul>
+              </p>
+              </div>
+            </section>
+
+
+            <section>
+              <p><small>It looks like a very negative view of human nature, but...</small></p>
+              <h1><em>TRUST</em> < <strong>GREED</strong></h1>
+              <img data-src="res/greed.jpg" height="300" />
+              <p><small>History has proven that relying on the "good will" of a few ones, just doesn't work.</small></p>
+            </section>
+
+            <section>
+              <h3>Decentralization matters</em></h3>
+              <hr />
+              <div>
+              <p>
+              <p class="fragment">Yes, all that stuff looks interesting, in theory at least...</p>
+              <h3 class="fragment"><strong>But who cares ?</strong></h3>
+              </p>
+              </div>
+
+              <div class="fragment">
+              <p>
+                <h4>January 2015 - <em>IBM</em> and <em>Samsung</em> unveil <em>ADEPT</em></h4>
+                <h5><em>
+Autonomous Decentralized Peer-to-Peer Telemetry
+                </em></h5>
+                Using a <em>Blockchain</em> with <a href="https://www.ethereum.org/">Ethereum</a>,
+                <a href="http://telehash.org/">Telehash</a> for communication, and <a href="http://www.bittorrent.com/">BitTorrent</a>.
+              </p>
+              </div>
+
+              <div class="fragment">
+              <p>
+                <hr />
+                <p>However, nearly 8 months ago... <a href="https://github.com/Torlus/mosquitto-twister">Mosquitto-Twister</a></p>
+                <q>Proof-of-concept of a fully distributed MQTT broker for the IoT. Uses Twister platform, Bitcoin and Bittorrent protocols.</q>
+                <a href="https://github.com/Torlus/mosquitto-twister">https://github.com/Torlus/mosquitto-twister</a>
+              </p>
+              </div>
+            </section>
+
+            <section>
+              <h3>How does it work?</em></h3>
+              <hr />
+              <div class="fragment">
+              <p>
+                <h4>The <a href="http://twister.net.co/">Twister</a> platorm</h4>
+                <p><em>Twister</em> is a fully decentralized <em>Twitter</em> clone.</p>
+                <p>
+                  <ul>
+                    <li class="fragment">A <em>Blockchain</em> stores the full list of <em>User Handles</em>.</li>
+                    <li class="fragment"><em>User profiles</em> are stored in a <em>DHT</em> (Kademlia).</li>
+                    <li class="fragment"><em>Posts</em> are stored within <em>BitTorrent swarms</em>.</li>
+                    <li class="fragment"><em>DMs</em> are encrypted, other messages are not.</li>
+                  </ul>
+                </p>
+              </p>
+              </div>
+
+              <div class="fragment">
+              <p>
+                <hr />
+                <h4>Mapping into <em>MQTT</em> concepts</h4>
+                <small>...and addressing security and privacy as well, while we're at it...</small>
+                <p>
+                  <ul>
+                    <li class="fragment">A <em>Handle</em> is used instead of a <strong>Domain Name</strong>.</li>
+                    <li class="fragment"><em>MQTT's pub/sub model</em> fits nicely with Twi[st]ter's one.</li>
+                  </ul>
+                </p>
+              </p>
+              </div>
+            </section>
+
+
+            <section>
+              <h3>Now, what?</em></h3>
+              <hr />
+              <div class="fragment">
+              <p>
+                <h5 class="fragment">Here is some food for thought (and the Q &amp; A session):</h5>
+                <p>
+                  <ul>
+                    <li class="fragment"><em>Secret sharing</em>.
+                      <p>Secret keys are hard to protect. Storing a key into a device makes it a <strong>SPOF</strong>, so let's <em>split</em> the key into parts and store those parts across <em>multiple</em> devices... Hint: <a href="http://point-at-infinity.org/ssss/">ssss</a>.</p>
+                    </li>
+                    <li class="fragment"><em>Adaptive security</em>.
+                      <p>NFC payments are prone to errors, but limited to a maximum amount. It's a matter of <strong>risk</strong> versus <strong>consequences</strong>.
+                        Let's extend this principle to give a <em>proper response</em> to a given situation, using a <em>Quorum</em>.</p>
+                    </li>
+                  </ul>
+                </p>
+              </p>
+              </div>
+            </section>
+
+            <section>
+              <h3>Now, what?</em></h3>
+              <hr />
+              <div>
+              <p>
+                <p>
+                  <ul>
+                    <li class="fragment"><em>Cryptography and low-end devices</em>.
+                      <p>Cryptography is costly. Do we need strong cryptography, when EFT standards still use <strong>DES</strong> (2-TDES, <strong>112-bit</strong> key length) ? Hint: <a href="http://en.wikipedia.org/wiki/Derived_unique_key_per_transaction">DUKPT</a>.</p>
+                    </li>
+                    <li class="fragment"><em>Blockchain and incentive issues</em>.
+                      <p>Blockchains quickly become <strong>huge</strong>. Would a <em>distributed Blockchain storage</em> be possible or relevant? What about integrity? Use another Blockchain for this purpose ?</p>
+                      <p>Generally speaking, what would be good <em>incentives</em> for non-cryptocurrencies-related Blockchains ? Example: <a href="https://okturtles.com/">DNSChain</a>.</p>
+                    </li>
+                  </ul>
+                </p>
+              </p>
+              </div>
+            </section>
+
+            <!--section>
+                <h3><em>Security</em></h3>
+                <hr />
+                <h3>What are the roots of IT security?</h3>
+                <h3 class="fragment"><em>Cryptography</em></h3>
+                <p>
+                  <ul>
+                    <li class="fragment">Asymmetric cryptography preferred.</li>
+                    <li class="fragment">Strong algorithms.</li>
+                    <li class="fragment">Large cryptographic keys sizes.</li>
+                  </ul>
+                </p>
+                <h3 class="fragment"><em>Good practices</em></h3>
+                <p>
+                  <ul>
+                    <li class="fragment">Strong passwords.</li>
+                    <li class="fragment">Multi-factor authentication.</li>
+                    <li class="fragment"><em>Cryptographic key management.</em></li>
+                    <li class="fragment"><em>Cryptographic key erosion prevention.</em></li>
+                  </ul>
+                </p>
+            </section>
+
+            <section>
+                <h3><em>Security</em></h3>
+                <hr />
+                <h3>In practice</h3>
+                <p>Let's compare two different security strategies</p>
+                <table>
+                  <tr class="fragment">
+                    <th><h4><em>Topic</em></h4></th>
+                    <th><h4>Online services</h4></th>
+                    <th><h4>Payment cards</h4></th>
+                  <tr>
+                  <tr class="fragment">
+                    <td><em>Passwords</em></td>
+                    <td>8+ characters alpha, num, special</td>
+                    <td>4 digits PIN code</td>
+                  </tr>
+                  <tr class="fragment">
+                    <td><em>Cryptography</em></td>
+                    <td>Asymmetric</td>
+                    <td>Symmetric</td>
+                  </tr>
+                  <tr class="fragment">
+                    <td><em>Algorithms</em></td>
+                    <td>RSA, AES</td>
+                    <td>DES (2TDES)</td>
+                  </tr>
+                  <tr class="fragment">
+                    <td><em>Key sizes</em></td>
+                    <td>2048, 4096</td>
+                    <td>112 (2 x 56)</td>
+                  </tr>
+                  <tr class="fragment">
+                    <td><h4>Failure Impact</h4></td>
+                    <td class="fragment">Embarassing party pictures leakage</td>
+                    <td class="fragment"><strong>Bankrupcy, for you and your whole family</strong></td>
+                  </tr>
+                </table>
+            </section-->
+
+            <!--section>
+                <h3><em>Security</em></h3>
+                <hr />
+                <h3>Wait... what? Is EFT security <strong>that</strong> bad???</h3>
+                <p>
+                  <h4 class="fragment">Fortunately not:</h4>
+                  <ul>
+                    <li class="fragment">Strong <strong>key management</strong> scheme:
+                      <p class="fragment"><em>LMK</em> stored in HSM/Secure Elements,</p>
+                      <p class="fragment"><em>KEK</em> used for transport.</p>
+                      <p class="fragment">Keys are splitted into two or more parts.</p>
+                    </li>
+                    <li class="fragment"><strong>Key derivation</strong> schemes<em> (DUKPT) </em>:
+                      <p class="fragment"><em>BDK, IPEK</em> are never exposed,</p>
+                      <p class="fragment"><em>Session Keys</em> are used only <em>once</em> (KSN).</p>
+                    </li>
+                  </ul>
+                </p>
+            </section-->
+
+            <section data-background="res/question-bg.svg" data-background-size="60%">
+                <h1>Questions?</h1>
+                <hr />
+                <p>
+                    Gregory Estrade
+                    - <a href="http://lvt.tl/">http://lvt.tl/</a>
+                </p>
+                <p>
+                    <em>@Torlus</em> on
+                    <a href="https://twitter.com/Torlus">Twitter</a>,
+                    <a href="https://github.com/Torlus">GitHub</a>.
+                </p>
+            </section>
+        </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+        // Full list of configuration options available at:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+
+            // Parallax background image
+            parallaxBackgroundImage: 'res/bg_dark.png', // e.g. "https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg"
+
+            // Parallax background size
+            parallaxBackgroundSize: '1783px 894px', // CSS syntax, e.g. "2100px 900px" - currently only pixels are supported (don't use % or auto)
+
+
+            transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+            // Optional reveal.js plugins
+            dependencies: [
+                {
+                    src: 'lib/js/classList.js',
+                    condition: function () {
+                        return !document.body.classList;
+                    }
+                },
+                {
+                    src: 'plugin/markdown/marked.js',
+                    condition: function () {
+                        return !!document.querySelector('[data-markdown]');
+                    }
+                },
+                {
+                    src: 'plugin/markdown/markdown.js',
+                    condition: function () {
+                        return !!document.querySelector('[data-markdown]');
+                    }
+                },
+                {
+                    src: 'plugin/highlight/highlight.js',
+                    async: true,
+                    condition: function () {
+                        return !!document.querySelector('pre code');
+                    },
+                    callback: function () {
+                        hljs.initHighlightingOnLoad();
+                    }
+                },
+                {
+                    src: 'plugin/zoom-js/zoom.js',
+                    async: true
+                },
+                {
+                    src: 'plugin/notes/notes.js',
+                    async: true
+                }
+    ]
+        });
+    </script>
+
+</body>
+
+</html>
