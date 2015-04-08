@@ -56,20 +56,6 @@
             </section>
 
             <!--section>
-                <h3>Identity, Security and Privacy</h3>
-                <hr />
-                <h4>State of the art</h4>
-                <div>
-                  <p>Identity, Security and Privacy are</p>
-                  <ul>
-                    <li><em>Identity</em> and <em>Privacy</em> cannot be ensured without <em>Security</em>.</li>
-                    <li>Many security-related services rely on <em>Trust</em>: <strong>DNS, SSL/TLS</strong>.</li>
-                    <li>For these services, a <strong>Hierarchical Trust Model</strong> is used.</li>
-                  </ul>
-                </div>
-            </section-->
-
-            <section>
               <h3>IoT - State of the art</h3>
               <hr />
               <div class="fragment">
@@ -95,10 +81,13 @@
                 <h3>Focus of this talk</h3>
                 <h4><em>Home automation</em> using <em>MQTT</em></h4>
               </div>
-            </section>
+            </section-->
 
             <section>
-              <h3>Home automation using MQTT</h3>
+              <h3>IoT - State of the art</h3>
+              <hr />
+              <h4>Focus of this talk</h4>
+              <h2>Home automation using <em>MQTT</em></h2>
               <hr />
               <h4>A quick <em>MQTT</em> overview</h4>
               <p>
@@ -114,7 +103,7 @@
             <section>
               <h3>Home automation using MQTT</h3>
               <hr />
-              <div class="fragment">
+              <div>
               <p>
               <h4>Architecture basics</h4>
               <ul>
@@ -143,19 +132,21 @@
             <section>
               <h3>Home automation using MQTT</h3>
               <hr />
-              <div class="fragment">
+              <div>
               <p>
               <h4>Connecting our home to the IoT</h4>
               <ul>
                 <li>Naming: <code><strong>my_home.domain.name</strong>/&lt;location&gt;/&lt;device&gt;</code>.</li>
-                <li>Security: <strong>SSL/TLS</strong> required for MQTT requests from Internet.</li>
+                <li>Security: <strong>TLS</strong> required for MQTT requests from Internet.</li>
               </ul>
               </p>
               </div>
 
-              <h3 class="fragment"><em>Well, it was easy, wasn't it?</em></h3>
-              <h3 class="fragment">End of the story?</h3>
-              <h1 class="fragment"><strong>.NOPE.</strong></h1>
+              <div class="fragment">
+              <h3><em>Well, it was easy, wasn't it?</em></h3>
+              <h3>End of the story?</h3>
+              <h1><strong>.NOPE.</strong></h1>
+            </div>
 
             </section>
 
@@ -163,7 +154,7 @@
             <section>
                 <h3><strong>DNS</strong> and <strong>SSL/TLS</strong> concerns</h3>
                 <hr />
-                <div class="fragment">
+                <div>
                 <p>
                   <h4>Threats on <strong>DNS</strong></h4>
                       <ul>
@@ -174,7 +165,7 @@
                 </p>
                 </div>
 
-                <div class="fragment">
+                <div>
                 <p>
                   <h4>Issues with <strong>SSL/TLS</strong></h4>
                       <ul>
@@ -191,7 +182,7 @@
             </section>
 
             <section data-background="res/xfiles.jpg">
-                <div class="fragment">
+                <div>
                 <h1>&nbsp;</h1>
                 <h1><strong>Hierarchical</strong></h1>
                 <h1><em>Trust Model</em></h1>
@@ -201,7 +192,7 @@
             <section>
               <h2>Enter the <em>Blockchain</em></h2>
               <hr />
-              <div class="fragment">
+              <div>
               <p>
               <h4>The Blockchain</h4>
               <ul>
@@ -216,9 +207,9 @@
               <p>
               <h4>Why does it work?</h4>
               <ul>
-                <li class="fragment">The <em>mining</em> process <em>rewards</em> people for maintaining the ledger's <em>integrity</em>. Mining is <em>computational power-hungry</em>.</li>
-                <li class="fragment">In cryptocurrencies, <em>everyone</em> in the network is <em>motivated</em> by the same <em>incentive</em>, i.e. getting money.</li>
-                <li class="fragment">It works because <strong>everyone is a bit greedy</strong> and that the "silent majority" outperforms the "few villains".</li>
+                <li>The <em>mining</em> process <em>rewards</em> people for maintaining the ledger's <em>integrity</em>. Mining is <em>computational power-hungry</em>.</li>
+                <li>In cryptocurrencies, <em>everyone</em> in the network is <em>motivated</em> by the same <em>incentive</em>, i.e. getting money.</li>
+                <li>It works because <strong>everyone is a bit greedy</strong> and that the "silent majority" outperforms the "few villains".</li>
               </ul>
               </p>
               </div>
@@ -237,12 +228,12 @@
               <hr />
               <div>
               <p>
-              <p class="fragment">Yes, all that stuff looks interesting, in theory at least...</p>
-              <h3 class="fragment"><strong>But who cares ?</strong></h3>
+              <p>Yes, all that stuff looks interesting, in theory at least...</p>
+              <h3><strong>But who cares ?</strong></h3>
               </p>
               </div>
 
-              <div class="fragment">
+              <div>
               <p>
                 <h4>January 2015 - <em>IBM</em> and <em>Samsung</em> unveil <em>ADEPT</em></h4>
                 <h5><em>
@@ -266,16 +257,16 @@ Autonomous Decentralized Peer-to-Peer Telemetry
             <section>
               <h3>How does it work?</em></h3>
               <hr />
-              <div class="fragment">
+              <div>
               <p>
                 <h4>The <a href="http://twister.net.co/">Twister</a> platorm</h4>
                 <p><em>Twister</em> is a fully decentralized <em>Twitter</em> clone.</p>
                 <p>
                   <ul>
-                    <li class="fragment">A <em>Blockchain</em> stores the full list of <em>User Handles</em>.</li>
-                    <li class="fragment"><em>User profiles</em> are stored in a <em>DHT</em> (Kademlia).</li>
-                    <li class="fragment"><em>Posts</em> are stored within <em>BitTorrent swarms</em>.</li>
-                    <li class="fragment"><em>DMs</em> are encrypted, other messages are not.</li>
+                    <li>A <em>Blockchain</em> stores the full list of <em>User Handles</em>.</li>
+                    <li><em>User profiles</em> are stored in a <em>DHT</em> (Kademlia).</li>
+                    <li><em>Posts</em> are stored within <em>BitTorrent swarms</em>.</li>
+                    <li><em>DMs</em> are encrypted, other messages are not.</li>
                   </ul>
                 </p>
               </p>
@@ -288,27 +279,61 @@ Autonomous Decentralized Peer-to-Peer Telemetry
                 <small>...and addressing security and privacy as well, while we're at it...</small>
                 <p>
                   <ul>
-                    <li class="fragment">A <em>Handle</em> is used instead of a <strong>Domain Name</strong>.</li>
-                    <li class="fragment"><em>MQTT's pub/sub model</em> fits nicely with Twi[st]ter's one.</li>
+                    <li>A <em>Handle</em> is used instead of a <strong>Domain Name</strong>.</li>
+                    <li><em>MQTT's pub/sub model</em> fits nicely with Twi[st]ter's one.</li>
                   </ul>
                 </p>
               </p>
               </div>
             </section>
 
-
             <section>
-              <h3>Now, what?</em></h3>
+              <h3>Now what?</em></h3>
               <hr />
-              <div class="fragment">
+              <h3>Blockchains and <em>incentive</em> issues</h3>
+              <div>
               <p>
-                <h5 class="fragment">Here is some food for thought (and the Q &amp; A session):</h5>
                 <p>
                   <ul>
-                    <li class="fragment"><em>Secret sharing</em>.
+                    <li>Generally speaking, what would be good <em>incentives</em> for non-cryptocurrencies-related Blockchains?
+                      <p>Example: <a href="https://okturtles.com/">DNSChain</a>.</p>
+                    </li>
+                    <li>Blockchains quickly become <strong>huge</strong>.
+                      <p>Would a <em>distributed Blockchain storage</em> be possible or relevant? What about integrity? Use another Blockchain for this purpose ?</p>
+                    </li>
+                  </ul>
+                </p>
+              </p>
+              </div>
+            </section>
+
+            <section>
+                <h3>Other subjects</h3>
+                <hr />
+                <ul>
+                  <li><em>Cryptography and low-end devices</em>.
+                    <p>Cryptography is costly. Do we need strong cryptography, when EFT standards still use <strong>DES</strong> (2-TDES, <strong>112-bit</strong> key length) ? Hint: <a href="http://en.wikipedia.org/wiki/Derived_unique_key_per_transaction">DUKPT</a>.</p>
+                  </li>
+                <li>Most cryptography algorithms rely on the <strong>difficulty</strong> of performing some tasks.</li>
+                <li><a href="http://en.wikipedia.org/wiki/One-time_pad">http://en.wikipedia.org/wiki/One-time_pad</a> is very simple to understand, yet:</li>
+                <ul>
+                  <li>It is one of the few systems <em>proven unbreakable</em> (Shannon, 1949)</li>
+                  <li>It has been invented by Frank Miller, a <em>banker</em>.</li>
+                </ul>
+                </ul>
+            </section>
+
+            <section>
+              <h3>Other subjects</em></h3>
+              <hr />
+              <div>
+              <p>
+                <p>
+                  <ul>
+                    <li><em>Secret sharing</em>.
                       <p>Secret keys are hard to protect. Storing a key into a device makes it a <strong>SPOF</strong>, so let's <em>split</em> the key into parts and store those parts across <em>multiple</em> devices... Hint: <a href="http://point-at-infinity.org/ssss/">ssss</a>.</p>
                     </li>
-                    <li class="fragment"><em>Adaptive security</em>.
+                    <li><em>Adaptive security</em>.
                       <p>NFC payments are prone to errors, but limited to a maximum amount. It's a matter of <strong>risk</strong> versus <strong>consequences</strong>.
                         Let's extend this principle to give a <em>proper response</em> to a given situation, using a <em>Quorum</em>.</p>
                     </li>
@@ -318,53 +343,23 @@ Autonomous Decentralized Peer-to-Peer Telemetry
               </div>
             </section>
 
-            <section>
-              <h3>Now, what?</em></h3>
-              <hr />
-              <div>
-              <p>
-                <p>
-                  <ul>
-                    <li class="fragment"><em>Cryptography and low-end devices</em>.
-                      <p>Cryptography is costly. Do we need strong cryptography, when EFT standards still use <strong>DES</strong> (2-TDES, <strong>112-bit</strong> key length) ? Hint: <a href="http://en.wikipedia.org/wiki/Derived_unique_key_per_transaction">DUKPT</a>.</p>
-                    </li>
-                    <li class="fragment"><em>Blockchain and incentive issues</em>.
-                      <p>Blockchains quickly become <strong>huge</strong>. Would a <em>distributed Blockchain storage</em> be possible or relevant? What about integrity? Use another Blockchain for this purpose ?</p>
-                      <p>Generally speaking, what would be good <em>incentives</em> for non-cryptocurrencies-related Blockchains ? Example: <a href="https://okturtles.com/">DNSChain</a>.</p>
-                    </li>
-                  </ul>
-                </p>
-              </p>
-              </div>
-            </section>
-
-            <!--section>
-                <h3><em>Security</em></h3>
+            <section data-background="res/question-bg.svg" data-background-size="60%">
+                <h1>Questions?</h1>
                 <hr />
-                <h3>What are the roots of IT security?</h3>
-                <h3 class="fragment"><em>Cryptography</em></h3>
                 <p>
-                  <ul>
-                    <li class="fragment">Asymmetric cryptography preferred.</li>
-                    <li class="fragment">Strong algorithms.</li>
-                    <li class="fragment">Large cryptographic keys sizes.</li>
-                  </ul>
+                    Gregory Estrade
+                    - <a href="http://lvt.tl/">http://lvt.tl/</a>
                 </p>
-                <h3 class="fragment"><em>Good practices</em></h3>
                 <p>
-                  <ul>
-                    <li class="fragment">Strong passwords.</li>
-                    <li class="fragment">Multi-factor authentication.</li>
-                    <li class="fragment"><em>Cryptographic key management.</em></li>
-                    <li class="fragment"><em>Cryptographic key erosion prevention.</em></li>
-                  </ul>
+                    <em>@Torlus</em> on
+                    <a href="https://twitter.com/Torlus">Twitter</a>,
+                    <a href="https://github.com/Torlus">GitHub</a>.
                 </p>
             </section>
 
             <section>
-                <h3><em>Security</em></h3>
+                <h3>Bonus: Security and Trust</h3>
                 <hr />
-                <h3>In practice</h3>
                 <p>Let's compare two different security strategies</p>
                 <table>
                   <tr class="fragment">
@@ -394,45 +389,12 @@ Autonomous Decentralized Peer-to-Peer Telemetry
                   </tr>
                   <tr class="fragment">
                     <td><h4>Failure Impact</h4></td>
-                    <td class="fragment">Embarassing party pictures leakage</td>
-                    <td class="fragment"><strong>Bankrupcy, for you and your whole family</strong></td>
+                    <td>Embarrassing party pictures leakage</td>
+                    <td><strong>Bankrupcy, for you and your whole family</strong></td>
                   </tr>
                 </table>
-            </section-->
-
-            <!--section>
-                <h3><em>Security</em></h3>
-                <hr />
-                <h3>Wait... what? Is EFT security <strong>that</strong> bad???</h3>
-                <p>
-                  <h4 class="fragment">Fortunately not:</h4>
-                  <ul>
-                    <li class="fragment">Strong <strong>key management</strong> scheme:
-                      <p class="fragment"><em>LMK</em> stored in HSM/Secure Elements,</p>
-                      <p class="fragment"><em>KEK</em> used for transport.</p>
-                      <p class="fragment">Keys are splitted into two or more parts.</p>
-                    </li>
-                    <li class="fragment"><strong>Key derivation</strong> schemes<em> (DUKPT) </em>:
-                      <p class="fragment"><em>BDK, IPEK</em> are never exposed,</p>
-                      <p class="fragment"><em>Session Keys</em> are used only <em>once</em> (KSN).</p>
-                    </li>
-                  </ul>
-                </p>
-            </section-->
-
-            <section data-background="res/question-bg.svg" data-background-size="60%">
-                <h1>Questions?</h1>
-                <hr />
-                <p>
-                    Gregory Estrade
-                    - <a href="http://lvt.tl/">http://lvt.tl/</a>
-                </p>
-                <p>
-                    <em>@Torlus</em> on
-                    <a href="https://twitter.com/Torlus">Twitter</a>,
-                    <a href="https://github.com/Torlus">GitHub</a>.
-                </p>
             </section>
+
         </div>
     </div>
 
