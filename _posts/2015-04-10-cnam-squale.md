@@ -22,8 +22,8 @@ Les informations à son sujet se résument en gros à ce que [Olivier Aichelbaum
 
 - [Les souvenirs du constructeur de l'ordinateur Squale.](http://www.acbm.com/inedits/squale-apollo-7.html)
 
-Il n'en existe que 3 exemplaires connus: celui d'Olivier, un autre appartenant à un collectionneur qui est resté sourd aux diverses sollicitations, et un dernier donné au [CNAM](http://www.arts-et-metiers.net/) par [Sylvain Bizoirre](http://www.espace-turing.fr/Interview-Acquisition-par-le-CNAM.html).
+Il n'en existe que **trois exemplaires** connus: celui d'Olivier, un autre appartenant à un collectionneur qui est resté sourd aux diverses sollicitations, et un dernier donné au [CNAM](http://www.arts-et-metiers.net/) par [Sylvain Bizoirre](http://www.espace-turing.fr/Interview-Acquisition-par-le-CNAM.html).
 
-Olivier étant plutôt du genre occupé, à l'étranger, et de retour en France de manière difficilement planifiable, la seule alternative "stable" restait le CNAM.
+Olivier étant plutôt du genre occupé, à l'étranger, et de retour en France de manière difficilement planifiable, la seule alternative "stable" restait le **CNAM**.
 
 Toutes les tentatives précédentes ayant échoué, me voilà donc muni de la motivation nécessaire pour tenter ma chance. :D
