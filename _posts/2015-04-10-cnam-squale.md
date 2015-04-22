@@ -26,4 +26,10 @@ Il n'en existe que **trois exemplaires** connus: celui d'Olivier, un autre appar
 
 Olivier étant plutôt du genre occupé, à l'étranger, et de retour en France de manière difficilement planifiable, la seule alternative "stable" restait le **CNAM**.
 
-Toutes les tentatives précédentes ayant échoué, me voilà donc muni de la motivation nécessaire pour tenter ma chance. :D
+Toutes les tentatives précédentes ayant échoué, me voilà donc muni de la motivation nécessaire pour tenter ma chance.
+
+# Prise de renseignements et démarche
+Je commence à regarder du côté de la communauté des collectionneurs,
+ou amateurs des micro-ordinateurs de cette époque. Je sais que des tentatives d'approche ont été réalisées, mais sans succès.
+
+Je dépose donc une demande en ce sens sur le formulaire de contact du CNAM. Au bout de quelque temps, je reçois la réponse d'une personne que je nommerai **Ariane**.
