@@ -29,7 +29,31 @@ Olivier étant plutôt du genre occupé, à l'étranger, et de retour en France 
 Toutes les tentatives précédentes ayant échoué, me voilà donc muni de la motivation nécessaire pour tenter ma chance.
 
 # Prise de renseignements et démarche
+
+## Prise de contact
+
 Je commence à regarder du côté de la communauté des collectionneurs,
 ou amateurs des micro-ordinateurs de cette époque. Je sais que des tentatives d'approche ont été réalisées, mais sans succès.
 
 Je dépose donc une demande en ce sens sur le formulaire de contact du CNAM. Au bout de quelque temps, je reçois la réponse d'une personne que je nommerai **Ariane**.
+
+En voici la teneur:
+
+> Cette manipulation peut etre envisageable mais elle ne peut se faire que dans nos locaux a St Denis (93), et donc sur rendez-vous, en ma presence et celle d'un de nos restaurateurs.
+
+> De plus, j'aurai souhaite de votre part, avant toute demande de rendez-vous, une description detaillee de votre procedure d'intervention afin de valider que celle-ci s'effectuera a priori sans risque pour l'objet.
+
+Bonne nouvelle! L'intervention est envisageable, mais je décèle rapidement qu'il va falloir montrer "patte blanche", et se poser les bonnes questions dès le début. On ne plaisante pas avec la conservation et préservation du patrimoine, et c'est tant mieux.
+
+Cependant, conserver un objet "matériel" est une chose, mais dans ce cas-là, ce qui nous intéresse (entre autres), ce sont aussi des parties "immatérielles", comme le contenu de l'EPROM contenant le moniteur, ainsi que le contenu d'un PAL.
+
+## Analyse des informations existantes
+
+J'en fais part à **Jeff** dont je perçois déjà que les compétences seront utiles pour mener une telle opération.
+
+Nous mettons en commun nos informations sur le sujet, et voici ce qu'il en ressort:
+- Le PCB est à double face, ce qui va permettre de le "capturer" complêtement.
+- Tous les composants logiques sont montés sur support, ce qui est un excellente nouvelle. Pas de dessoudage/ressoudage à prévoir à priori.
+- Il n'y a pas d'ASIC, le seul composant programmable est un PAL qui ne sert à priori qu'à faire du décodage d'adresses. On pourra donc en extraire facilement la combinatoire.
+
+## Donner du sens à la démarche
