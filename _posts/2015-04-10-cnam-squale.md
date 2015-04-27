@@ -52,6 +52,7 @@ Cependant, conserver un objet "matériel" est une chose, mais dans ce cas-là, c
 J'en fais part à **Jeff** dont je perçois déjà que les compétences seront utiles pour mener une telle opération.
 
 Nous mettons en commun nos informations sur le sujet, et voici ce qu'il en ressort:
+
 - Le PCB est à double face, ce qui va permettre de le "capturer" complêtement.
 - Tous les composants logiques sont montés sur support, ce qui est un excellente nouvelle. Pas de dessoudage/ressoudage à prévoir à priori.
 - Il n'y a pas d'ASIC, le seul composant programmable est un PAL qui ne sert à priori qu'à faire du décodage d'adresses. On pourra donc en extraire facilement la combinatoire.
