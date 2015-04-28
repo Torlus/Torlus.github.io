@@ -10,6 +10,7 @@ tags: []
 Pour passer le temps pendant cette période abhorrée des fêtes obligatoires, je cherche en général quelque chose pour m'occuper l'esprit pour le début de l'année. Cela a donné:
 
 - En 2010, [La SEGA Megadrive dans un FPGA.](https://github.com/Torlus/fpgagen)
+
 - En 2011, [La NEC PC-Engine dans un FPGA.](https://github.com/Torlus/FPGAPCE)
 
 La [Jaguar dans un FPGA](https://github.com/Torlus/JagNetlists) a du naître dans ces moments-là aussi (en 2 fois, entre 2012 et 2013).
@@ -19,6 +20,7 @@ Et cette année, pas moyen de trouver l'inspiration. Et puis (allez savoir comme
 Les informations à son sujet se résument en gros à ce que [Olivier Aichelbaum](http://www.acbm.com/) a écrit sur le sujet:
 
 - [Squale, l'ordinateur qui s'est cassé les dents.](http://www.acbm.com/olivier-aichelbaum/musee/squale/)
+
 - [Les souvenirs du constructeur de l'ordinateur Squale.](http://www.acbm.com/inedits/squale-apollo-7.html)
 
 Il n'en existe que **trois exemplaires** connus: celui d'Olivier, un autre appartenant à un collectionneur qui est resté sourd aux diverses sollicitations, et un dernier donné au [CNAM](http://www.arts-et-metiers.net/) par [Sylvain Bizoirre](http://www.espace-turing.fr/Interview-Acquisition-par-le-CNAM.html).
@@ -53,7 +55,9 @@ J'en fais part à **Jeff** dont je perçois déjà que les compétences seront u
 Nous mettons en commun nos informations sur le sujet, et voici ce qu'il en ressort:
 
 - Le PCB est à double face, ce qui va permettre de le "capturer" complêtement.
+
 - Tous les composants logiques sont montés sur support, ce qui est un excellente nouvelle. Pas de dessoudage/ressoudage à prévoir à priori.
+
 - Il n'y a pas d'ASIC, le seul composant programmable est un PAL qui ne sert à priori qu'à faire du décodage d'adresses. On pourra donc en extraire facilement la combinatoire.
 
 ## Donner un sens à la démarche
@@ -65,8 +69,13 @@ Cependant, la question qui m'a été posée un certain nombre de fois est: *Pour
 Cela m'a amené finalement à réfléchir sur le sujet (pour ma part, "parce que je peux" était une réponse satisfaisante). Et finalement, j'ai trouvé du sens à cette démarche:
 
 - Ce genre d'opération sur une machine inconnue est relativement rare. Et ici, il faut ménager la chèvre et le chou: récupérer le logiciel peut avoir un impact sur le matériel. Dans l'hypothèse d'un choix à faire entre une préservation "en l'état" ou la récupération d'informations, tout le monde n'aura pas forcément la même opinion.
+
 - La préservation de systèmes électroniques nécessite parfois des interventions, je pense notamment aux fuites de condensateurs qui peuvent détruire le PCB.
+
 - Parallèlement à cette intervention, l'association [silicium.org](http://www.silicium.org) devait réaliser un workshop en Belgique sur la maintenance et réparation de micro-ordinateurs anciens, et sur l'extraction des programmes et données stockées sur supports "fragiles" (Diskettes, CD-ROMs...).
+
 - La proximité de dates de ces deux événements ne pouvait pas être le fruit du hasard :) L'occasion me semblait belle pour réaliser un reportage sur le sujet.
 
 Malheureusement, le manque de temps et les circonstances en ont décidé autrement...
+
+Bon, entrons dans le vif du sujet, en passant à l'intervention proprement dite.
