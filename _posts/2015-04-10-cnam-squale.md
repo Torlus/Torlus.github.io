@@ -82,4 +82,10 @@ Bon, entrons dans le vif du sujet, en passant à l'intervention proprement dite.
 
 # Premier contact
 
+**Yun**, ma compagne, et moi arrivons sur les lieux. Même si au cours de nos échanges avec **Ariane** j'avais compris qu'on ne plaisantait pas avec la sécurité, c'est tout de même surprenant de voir que les réserves du CNAM résident dans une sorte de bunker.
+
+![bunker](/squale/bunker.jpg)
+
+Une fois les contrôles de sécurité passés, nous sommes accueillis par **Ariane** qui nous amène dans une salle où nous attend le fameux (ou pas) ***Squale***. 
+
 ![first](/squale/first.jpg)
