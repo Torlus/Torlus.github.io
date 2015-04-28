@@ -86,6 +86,22 @@ Bon, entrons dans le vif du sujet, en passant à l'intervention proprement dite.
 
 ![bunker](/squale/bunker.jpg)
 
-Une fois les contrôles de sécurité passés, nous sommes accueillis par **Ariane** qui nous amène dans une salle où nous attend le fameux (ou pas) ***Squale***. 
+Une fois les contrôles de sécurité passés, nous sommes accueillis par **Ariane** qui nous amène dans une salle où nous attend le fameux (ou pas) ***Squale***.
 
 ![first](/squale/first.jpg)
+
+## Etude externe 
+
+L'arrivée de **Jeff** étant un peu retardée, je consacre mon temps aux travaux préliminaires, à savoir prendre quelques photos et procéder au repérage des composants.
+
+![open](/squale/open.jpg)
+
+Les photos...
+
+![v1](/squale/v1.jpg)
+
+![v2](/squale/v2.jpg)
+
+![v3](/squale/v3.jpg)
+
+Le repérage des composants...
