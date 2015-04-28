@@ -79,3 +79,7 @@ Cela m'a amené finalement à réfléchir sur le sujet (pour ma part, "parce que
 Malheureusement, le manque de temps et les circonstances en ont décidé autrement...
 
 Bon, entrons dans le vif du sujet, en passant à l'intervention proprement dite.
+
+# Premier contact
+
+![first](first.jpg)
