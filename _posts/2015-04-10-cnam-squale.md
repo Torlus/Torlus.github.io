@@ -82,4 +82,4 @@ Bon, entrons dans le vif du sujet, en passant à l'intervention proprement dite.
 
 # Premier contact
 
-![first](squale/first.jpg)
+![first](/squale/first.jpg)
