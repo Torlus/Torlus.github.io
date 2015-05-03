@@ -90,18 +90,41 @@ Une fois les contrôles de sécurité passés, nous sommes accueillis par **Aria
 
 ![first](/squale/first.jpg)
 
-## Etude externe 
+# Etude externe
 
 L'arrivée de **Jeff** étant un peu retardée, je consacre mon temps aux travaux préliminaires, à savoir prendre quelques photos et procéder au repérage des composants.
 
 ![open](/squale/open.jpg)
 
-Les photos...
+## Les photos de la carte mère
 
-![v1](/squale/v1.jpg)
+Ici on trouve le **CPU**, la **DRAM** associée, ainsi que l'**EPROM** contenant le moniteur, et un **PIA**.
+
+![v1](/squale/v3.jpg)
+
+La machine dispose d'une connectique assez étoffée, on retrouve donc un deuxième **PIA**, ainsi qu'un **ACIA**. Le paquet de résistances e n bas constituent certainement des **échelles R/2R** pour la sortie vidéo.
+
+On y trouve aussi le **chip audio** (AY-3-8910A).
+
+On trouve aussi un **Ampli Op** certainement utilisé pour la lecture de cassettes.
 
 ![v2](/squale/v2.jpg)
 
-![v3](/squale/v3.jpg)
+Enfin on retrouve le **chip vidéo** semi-graphique, et sa **DRAM** associée.
 
-Le repérage des composants...
+![v3](/squale/v1.jpg)
+
+## Le repérage des composants
+
+Bon ce n'est pas le travail le plus passionnant du monde, mais il faut bien que quelqu'un le fasse. On prend son mal en patience et ça donne ceci:
+
+
+Le descriptif des composants se trouve [ici](/squale/mb.txt).
+
+## L'arrivée de Jeff
+
+**Jeff** arrive enfin, avec un paquet de matériel, ce qui n'est pas étonnant. :)
+
+Le plus amusant reste son **dumper/émulateur d'EPROMs** sur base de PC accompagné d'une carte dédiée. L'utilitaire logiciel tient sur une disquette, mais évidemment, le lecteur a été remplacé par un [HxC Floppy Drive Emulator](http://hxc2001.free.fr/floppy_drive_emulator/).
+
+![dumper](/squale/dumper.jpg)
