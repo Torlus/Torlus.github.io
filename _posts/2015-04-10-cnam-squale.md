@@ -100,7 +100,7 @@ L'arrivée de **Jeff** étant un peu retardée, je consacre mon temps aux travau
 
 Ici on trouve le *CPU*, la *DRAM* associée, ainsi que l'*EPROM* contenant le moniteur, et un *PIA*.
 
-![v1](/squale/v3.jpg)
+![v3](/squale/v3.jpg)
 
 La machine dispose d'une connectique assez étoffée, on retrouve donc un deuxième *PIA*, ainsi qu'un *ACIA*. Le paquet de résistances en bas constitue certainement des *échelles R/2R* pour la *sortie vidéo*.
 
@@ -112,11 +112,18 @@ On trouve aussi un *ampli op* certainement utilisé pour la lecture de *cassette
 
 Enfin on retrouve le *chip vidéo* semi-graphique, et sa *DRAM* associée.
 
-![v3](/squale/v1.jpg)
+![v1](/squale/v1.jpg)
 
 ## Le repérage des composants
 
 Bon ce n'est pas le travail le plus passionnant du monde, mais il faut bien que quelqu'un le fasse. On prend son mal en patience et ça donne ceci:
+
+![n1](/squale/n1.jpg)
+
+![n2](/squale/n2.jpg)
+
+![n3](/squale/n3.jpg)
+
 
 
 Le descriptif des composants se trouve [ici](/squale/mb.txt).
