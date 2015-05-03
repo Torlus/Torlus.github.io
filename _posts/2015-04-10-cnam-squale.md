@@ -23,7 +23,7 @@ Les informations à son sujet se résument en gros à ce que [Olivier Aichelbaum
 
 - [Les souvenirs du constructeur de l'ordinateur Squale.](http://www.acbm.com/inedits/squale-apollo-7.html)
 
-Il n'en existe que *trois exemplaires* connus: celui d'Olivier, un autre appartenant à un collectionneur qui est resté sourd aux diverses sollicitations, et un dernier donné au [CNAM](http://www.arts-et-metiers.net/) par [Sylvain Bizoirre](http://www.espace-turing.fr/Interview-Acquisition-par-le-CNAM.html).
+Il n'en existe que *trois exemplaires* connus: celui d'Olivier, un autre appartenant à un collectionneur qui est resté sourd aux diverses sollicitations, et un dernier cédé au [CNAM](http://www.arts-et-metiers.net/) par [Sylvain Bizoirre](http://www.espace-turing.fr/Interview-Acquisition-par-le-CNAM.html).
 
 Olivier étant plutôt du genre occupé, à l'étranger, et de retour en France de manière difficilement planifiable, la seule alternative "stable" restait le **CNAM**.
 
@@ -106,7 +106,7 @@ La machine dispose d'une connectique assez étoffée, on retrouve donc un deuxi�
 
 On y trouve aussi le *chip audio* (AY-3-8910A).
 
-On trouve aussi un *ampli op* certainement utilisé pour la lecture de cassettes.
+On trouve aussi un *ampli op* certainement utilisé pour la lecture de *cassettes*.
 
 ![v2](/squale/v2.jpg)
 
@@ -154,3 +154,57 @@ On lance l'utilitaire, et hop, on observe ceci:
 ![ep2](/squale/ep2.jpg)
 
 Les divers textes apparaissant (SQUALEMON V1.2, ERREUR) sont plutôt rassurants, en ce sens qu'ils semblent indiquer que le dump est correct.
+
+## Analyse du PAL
+
+Bon, là ça se "gâte" dans le sens où le dump de ce type de composant n'est pas pris en charge par le dumper de Jeff.
+
+C'est pas grave, on sort les vieilles recettes, à savoir utiliser le *port parallèle* du PC pour piloter le "bus d'adresse" du *PAL*, et on fait le repérage des valeurs de sortie sur le "bus de données" à l'*oscilloscope*.
+
+![pp](/squale/pp.jpg)
+
+Reste à écrire un bout de programme pour piloter le *port parallèle*. Dans quel langage? *Python*? *C*? Non, pas le temps, on y va à l'*assembleur 8088*, à l'ancienne.
+
+Et c'est parti: **Jeff** au pilotage du programme, moi-même au repérage sur la sortie du "bus de données" et au final Jeff notant le résultat.
+
+Vue d'ensemble:
+
+![mh1](/squale/mh1.jpg)
+
+Le repérage à l'*oscilloscope*:
+
+![mh2](/squale/mh2.jpg)
+
+Et on consigne les résultats:
+
+![mh3](/squale/mh3.jpg)
+
+# Conclusion
+
+## Un succès, à peu de choses près
+
+Malheureusement, le temps nous a manqué pour terminer, et il faut bien avouer que nous manquions de préparation (la grève des contrôleurs aériens ne nous a pas aidé en ce sens).
+
+Cependant, nous avons récupéré déjà de quoi largement avancer dans la préservation "logique" de ce micro-ordinateur, et à peu de choses près, nous avons de quoi créer un *émulateur* de celui-ci.
+
+Le compte-rendu de **Jeff** se trouve [ici](http://forum.system-cfg.com/viewtopic.php?f=24&t=1874&start=165#p101912).
+
+## De nouvelles pistes
+
+**Ariane** nous a donné son accord pour une deuxième intervention qui nous permettrait de finaliser ce travail. Elle devrait avoir lieu en *Septembre 2015*.
+
+Suite à cette intervention, **Olivier** m'a contacté, et devrait nous aider à recueillir plus d'éléments, comme la *disquette* contenant le *BASIC*, la *cartouche Minitel*, ainsi que certains contacts, afin de traiter le problème de la propriété intellectuelle de ces différents logiciels, et des ayants-droit.
+
+## Remerciements
+
+Je tiens à saluer et remercier:
+
+- Le **CNAM** et notamment **Ariane** pour nous avoir autorisé et aidé à étudier cette machine.
+
+- **Olivier** pour les informations collectées.
+
+- **Jeff** pour avoir participé grandement à l'intervention.
+
+- **Yun** pour son soutien moral et sa patience. :)
+
+- Les passionnés de [Silicium.org](http://www.silicium.org/), [MO5.com](http://www.mo5.com/) et [System.cfg](http://www.system-cfg.com/).
