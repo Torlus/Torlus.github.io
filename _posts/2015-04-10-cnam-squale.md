@@ -23,7 +23,7 @@ Les informations à son sujet se résument en gros à ce que [Olivier Aichelbaum
 
 - [Les souvenirs du constructeur de l'ordinateur Squale.](http://www.acbm.com/inedits/squale-apollo-7.html)
 
-Il n'en existe que **trois exemplaires** connus: celui d'Olivier, un autre appartenant à un collectionneur qui est resté sourd aux diverses sollicitations, et un dernier donné au [CNAM](http://www.arts-et-metiers.net/) par [Sylvain Bizoirre](http://www.espace-turing.fr/Interview-Acquisition-par-le-CNAM.html).
+Il n'en existe que *trois exemplaires* connus: celui d'Olivier, un autre appartenant à un collectionneur qui est resté sourd aux diverses sollicitations, et un dernier donné au [CNAM](http://www.arts-et-metiers.net/) par [Sylvain Bizoirre](http://www.espace-turing.fr/Interview-Acquisition-par-le-CNAM.html).
 
 Olivier étant plutôt du genre occupé, à l'étranger, et de retour en France de manière difficilement planifiable, la seule alternative "stable" restait le **CNAM**.
 
@@ -98,19 +98,19 @@ L'arrivée de **Jeff** étant un peu retardée, je consacre mon temps aux travau
 
 ## Les photos de la carte mère
 
-Ici on trouve le **CPU**, la **DRAM** associée, ainsi que l'**EPROM** contenant le moniteur, et un **PIA**.
+Ici on trouve le *CPU*, la *DRAM* associée, ainsi que l'*EPROM* contenant le moniteur, et un *PIA*.
 
 ![v1](/squale/v3.jpg)
 
-La machine dispose d'une connectique assez étoffée, on retrouve donc un deuxième **PIA**, ainsi qu'un **ACIA**. Le paquet de résistances e n bas constituent certainement des **échelles R/2R** pour la sortie vidéo.
+La machine dispose d'une connectique assez étoffée, on retrouve donc un deuxième *PIA*, ainsi qu'un *ACIA*. Le paquet de résistances en bas constitue certainement des *échelles R/2R* pour la *sortie vidéo*.
 
-On y trouve aussi le **chip audio** (AY-3-8910A).
+On y trouve aussi le *chip audio* (AY-3-8910A).
 
-On trouve aussi un **Ampli Op** certainement utilisé pour la lecture de cassettes.
+On trouve aussi un *ampli op* certainement utilisé pour la lecture de cassettes.
 
 ![v2](/squale/v2.jpg)
 
-Enfin on retrouve le **chip vidéo** semi-graphique, et sa **DRAM** associée.
+Enfin on retrouve le *chip vidéo* semi-graphique, et sa *DRAM* associée.
 
 ![v3](/squale/v1.jpg)
 
@@ -125,6 +125,32 @@ Le descriptif des composants se trouve [ici](/squale/mb.txt).
 
 **Jeff** arrive enfin, avec un paquet de matériel, ce qui n'est pas étonnant. :)
 
-Le plus amusant reste son **dumper/émulateur d'EPROMs** sur base de PC accompagné d'une carte dédiée. L'utilitaire logiciel tient sur une disquette, mais évidemment, le lecteur a été remplacé par un [HxC Floppy Drive Emulator](http://hxc2001.free.fr/floppy_drive_emulator/).
+Le plus amusant reste son *dumper/émulateur d'EPROMs* sur base de PC accompagné d'une carte ISA dédiée. L'utilitaire logiciel tient sur une disquette, mais évidemment, le lecteur a été remplacé par un [HxC Floppy Drive Emulator](http://hxc2001.free.fr/floppy_drive_emulator/).
 
 ![dumper](/squale/dumper.jpg)
+
+Il apporte aussi un *scanner*, dans le but d'avoir une vision du PCB complète. Il suggère une excellente idée: le PCB étant une pré-production, et étant translucide, il serait possible de compléter le scan des 2 faces par une photo du PCB *soumis à un forte lumière* afin de voir *les 2 faces en même temps*.
+
+Malheureusement, le temps nous a manqué pour réaliser cette opération.
+
+# Récupération des informations "cachées"
+
+Deux choses restent à extraire:
+
+- Le contenu de l'*EPROM*.
+
+- La combinatoire d'un *PAL* (32 mots de 8 bits) servant à du décodage d'adresses.
+
+## Dump de l'EPROM
+
+Après un (court) instant de frayeur, le PC de Jeff se montrant un peu récalcitrant au démarrage, l'extraction de l'*EPROM* se fait sans difficulté.
+
+Ici, on voit l'*EPROM* montée sur la carte-fille du PC.
+
+![ep1](/squale/ep1.jpg)
+
+On lance l'utilitaire, et hop, on observe ceci:
+
+![ep2](/squale/ep2.jpg)
+
+Les divers textes apparaissant (SQUALEMON V1.2, ERREUR) sont plutôt rassurants, en ce sens qu'ils semblent indiquer que le dump est correct.
