@@ -40,6 +40,7 @@ Lyra est rempli de personnes brillantes, passionnées, avec des caractères fort
 On parle souvent de *conception orientée utilisateur*, et là on est en plein dedans, car *les développeurs sont des utilisateurs* aussi, au même titre que l'équipe infra.
 
 Voici quelques règles de "bonne conduite", ou de posture/attitude à observer:
+
 - Le pôle devra être au service des équipes projets.
 - Les architectes intervenant sur les projets seront pilotés par le chef de projet, ou le Scrum master.
 - L'écoute est fondamentale, et les idées des autres, qu'elles soient des propositions fonctionnelles ou des suggestions d'outils/produits à utiliser, sont à considérer (j'ajouterai: avec plus d'importance que les siennes).
@@ -50,3 +51,36 @@ Documenter au fur et à mesure les essais et les choix faits.
 - *Ne pas interdire* à des personnes d'une équipe projet de traîter un sujet qui semblerait devoir être pris en charge par le pôle.
 Il vaut mieux ne pas proposer de solution, qu'en proposer une mauvaise.
 Après coup, quand le sujet est moins d'actualité, donc moins sensible, y revenir avec la "tête froide".
+
+# Ce qu'il ne faut pas (plus) faire
+
+En prêambule, une citation que j'affectionne particulièrement, et qui résume parfaitement mes dernières années chez Lyra:
+
+> It's easy to win forgiveness for being wrong; being right is what gets you into real trouble
+
+*Bjarne Stroustrup*
+
+## Adapter le problème à la solution...
+
+...au lieu d'adapter la solution au problème.
+
+Un bon article sur le sujet: [How to Avoid the Innovator’s Bias for the Solution](http://leanstack.com/how-to-uncover-the-right-problems-and-avoid-the-innovators-bias-for-the-solution/)
+
+## S'éloigner des standards
+
+Dernier exemple en date, "les API REST en mode batch".
+
+1. On crée des API REST d'administration.
+2. On décide de créer un format de fichier pour traiter par lots des appels d'API REST.
+3. Malheureusement, pour enchainer ces appels à l'API, il faut récupérer des informations à passer entre deux appels consécutifs.
+4. Quid de la logique conditionnelle ? De rejeu ?
+5. C'est trop compliqué, le client nous fournit un format de fichier plat, et on se débrouille en lui fournissant du code.
+
+J'avais dès l'étape 2 émis de serieux doutes quant à cette approche...
+
+## Ignorer le passé
+
+1. On crée des API SOAP d'administration.
+2. C'est trop compliqué, le client nous fournit un format de fichier plat (FAKIR), et on se débrouille.
+3. Ca va plus vite d'agir sur les entités directement, plutôt que d'appeler cette API.
+4. La moindre modification du format de fichier impose une relivraison de la plateforme VAD.
