@@ -56,9 +56,11 @@ Après coup, quand le sujet est moins d'actualité, donc moins sensible, y reven
 
 En prêambule, une citation que j'affectionne particulièrement, et qui résume parfaitement mes dernières années chez Lyra:
 
-> It's easy to win forgiveness for being wrong; being right is what gets you into real trouble
+> It's easy to win forgiveness for being wrong; being right is what gets you into real trouble.
 
 *Bjarne Stroustrup*
+
+Je n'ai pas toujours raison, mais j'ai rarement tort...
 
 ## Adapter le problème à la solution...
 
@@ -84,3 +86,5 @@ J'avais dès l'étape 2 émis de serieux doutes quant à cette approche...
 2. C'est trop compliqué, le client nous fournit un format de fichier plat (FAKIR), et on se débrouille.
 3. Ca va plus vite d'agir sur les entités directement, plutôt que d'appeler cette API.
 4. La moindre modification du format de fichier impose une relivraison de la plateforme VAD.
+
+Un air de déjà vu ?
