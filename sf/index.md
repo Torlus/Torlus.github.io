@@ -54,13 +54,25 @@ Après coup, quand le sujet est moins d'actualité, donc moins sensible, y reven
 
 # Ce qu'il ne faut pas (plus) faire
 
-En prêambule, une citation que j'affectionne particulièrement, et qui résume parfaitement mes dernières années chez Lyra:
+Petit florilège de mauvais choix, ne pas chercher de responsable en dehors de moi-même, pour avoir soit fait ou cautionné, soit laissé faire.
 
-> It's easy to win forgiveness for being wrong; being right is what gets you into real trouble.
+## Premature Optimisation
 
-*Bjarne Stroustrup*
+La citation du Dr Knuth la plus célèbre, et paradoxalement la moins comprise.
 
-Je n'ai pas toujours raison, mais j'ai rarement tort...
+Dans la famille "Premature", on trouve aussi Premature Abstraction, Premature Generalization, etc.
+
+Exemple: les tables VadCurTrans / VadRemTrans dans la VAD.
+
+## Interdépendances
+
+Exemples: Le MPI 3-DS, le centre de notifications...
+
+## Ne pas suffisément découper ou itérer
+
+On parle de mettre en commun les authentifications, les autorisations et les notifications.
+
+On parle bien de trois sujets différents, j'espère...
 
 ## Adapter le problème à la solution...
 
@@ -68,9 +80,11 @@ Je n'ai pas toujours raison, mais j'ai rarement tort...
 
 Un bon article sur le sujet: [How to Avoid the Innovator’s Bias for the Solution](http://leanstack.com/how-to-uncover-the-right-problems-and-avoid-the-innovators-bias-for-the-solution/)
 
+Exemple: toute l'architecture historique de la VAD. On y fait rentrer au chausse-pied SDD/SCT, marketplace, mPOS.
+
 ## S'éloigner des standards
 
-Dernier exemple en date, "les API REST en mode batch".
+Dernière "sortie de route" en date, "les API REST en mode batch".
 
 1. On crée des API REST d'administration.
 2. On décide de créer un format de fichier pour traiter par lots des appels d'API REST.
@@ -78,7 +92,7 @@ Dernier exemple en date, "les API REST en mode batch".
 4. Quid de la logique conditionnelle ? De rejeu ?
 5. C'est trop compliqué, le client nous fournit un format de fichier plat, et on se débrouille en lui fournissant du code.
 
-J'avais dès l'étape 2 émis de serieux doutes quant à cette approche...
+Un air de déjà vu ? Pour moi, oui, ce qui nous mène au sujet suivant.
 
 ## Ignorer le passé
 
@@ -87,4 +101,32 @@ J'avais dès l'étape 2 émis de serieux doutes quant à cette approche...
 3. Ca va plus vite d'agir sur les entités directement, plutôt que d'appeler cette API.
 4. La moindre modification du format de fichier impose une relivraison de la plateforme VAD.
 
-Un air de déjà vu ?
+## Ne jamais jeter de code
+
+Deux citations:
+
+> Measuring programming progress by lines of code is like measuring aircraft building progress by weight. -- *Bill Gates*
+
+> La perfection est atteinte, non pas lorsqu'il n'y a plus rien à  ajouter, mais lorsqu'il n'y a plus rien à retirer. -- *Antoine de Saint-Exupéry*
+
+## Ne pas commenter son code
+
+Avec un peu de mauvaise foi, un exemple: [Fast Inverse Square Root](http://en.wikipedia.org/wiki/Fast_inverse_square_root)
+```
+float Q_rsqrt( float number )
+{
+  long i;
+  float x2, y;
+  const float threehalfs = 1.5F;
+
+  x2 = number * 0.5F;
+  y  = number;
+  i  = * ( long * ) &y;
+  i  = 0x5f3759df - ( i >> 1 );
+  y  = * ( float * ) &i;
+  y  = y * ( threehalfs - ( x2 * y * y ) );
+  // y  = y * ( threehalfs - ( x2 * y * y ) );
+
+  return y;
+}
+```
