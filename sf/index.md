@@ -10,7 +10,11 @@ tagline: Lean Agile Software Factory
 Proposer des outils et des composants d'architecture,
 qui devront être à terme utilisés par tous les développeurs.
 
-Les composants seront pensés comme des *produits*, et répondre au concept du *Minimal Viable Product*.
+Quand on pense "composants d'architecture", dans la culture qui est encore la nôtre (mais plus pour longtemps), on pense **back-end**.
+
+Mais cela doit changer, il faut inclure le **front-end** dans la réflexion.
+
+Les composants seront pensés comme des *produits*, et répondre au concept du *Minimum Viable Product*.
 
 ![MVP](mvp.png)
 
@@ -37,7 +41,7 @@ Si on donne l'image que les éléments d'architecture leur sont *imposés*, cela
 
 Lyra est rempli de personnes brillantes, passionnées, avec des caractères forts. Il faut donc prendre le temps de *convaincre* les gens.
 
-On parle souvent de *conception orientée utilisateur*, et là on est en plein dedans, car *les développeurs sont des utilisateurs* aussi, au même titre que l'équipe infra.
+On parle souvent de *conception centrée utilisateur*, et là on est en plein dedans, car *les développeurs sont des utilisateurs* aussi, au même titre que l'équipe infra.
 
 Voici quelques règles de "bonne conduite", ou de posture/attitude à observer:
 
@@ -52,9 +56,33 @@ Documenter au fur et à mesure les essais et les choix faits.
 Il vaut mieux ne pas proposer de solution, qu'en proposer une mauvaise.
 Après coup, quand le sujet est moins d'actualité, donc moins sensible, y revenir avec la "tête froide".
 
-# Ce qu'il ne faut pas (plus) faire
+# UX, Ergonomie et front-end
 
-Petit florilège de mauvais choix, ne pas chercher de responsable en dehors de moi-même, pour avoir soit fait ou cautionné, soit laissé faire.
+Dans la *conception centrée utilisateur*, on implique le client et ses utilisateurs.
+
+Pour que le *produit* remporte l'*adhésion* de ceux-ci, il faut leur laisser concevoir la manière dont ils souhaiteraient réaliser les tâches qui incombent à leur métier.
+
+C'est là qu'intervient l'*expert UX*. Son but est d'identifier ce qui ennuie les utilisateurs, ce qu'il leur manque, et ce qui leur donne(rait) satisfaction.
+
+A partir de la collecte et de l'analyse de ces données d'utilisation, l'*ergonome* passe à la conception des IHM.
+
+Contrairement à l'architecture **back-end**, où on va rechercher la *généralisation*, l'architecture **front-end** devra être conçue pour gérer la *spécialisation*.
+
+Exemple: si au niveau back-end, on va essayer de faire en sorte qu'un SDD/SCT, un paiement par Wallet, par carte, par chèque-vacance rentrent dans un même concept de "transaction", au niveau front-end il faut que cette abstraction n'existe pas.
+
+*Toute abstraction a un prix*. Au niveau code, cela se traduit en général par une perte de performance, ce qui est souvent acceptable (l'inverse en général tombe dans la catégorie "Premature Optimization", j'y reviens).
+
+Au niveau de l'utilisateur, cela se traduit par un obstacle mental supplémentaire, qui va à l'encontre de l'UX. Et ça, ce n'est *pas acceptable*.
+
+# Pour aller plus loin
+
+Plus qu'un pôle "Architecture transversale", il faudra à terme un pôle qui sera en charge de définir les processus, la méthodologie, les outils, les conventions.
+
+Une sorte de [Software Factory](http://en.wikipedia.org/wiki/Software_factory) à l'ère de l'agilité.
+
+# Annexe - Ce qu'il ne faut pas (plus) faire
+
+Petit florilège de mauvaises idées et de mauvaises décisions, ne pas chercher de responsable en dehors de moi-même, pour avoir soit fait ou cautionné, soit laissé faire.
 
 ## Premature Optimisation
 
@@ -68,7 +96,7 @@ Exemple: les tables VadCurTrans / VadRemTrans dans la VAD.
 
 Exemples: Le MPI 3-DS, le centre de notifications...
 
-## Ne pas suffisément découper ou itérer
+## Ne pas suffisament découper ou itérer
 
 On parle de mettre en commun les authentifications, les autorisations et les notifications.
 
