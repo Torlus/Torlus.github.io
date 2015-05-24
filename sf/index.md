@@ -113,7 +113,7 @@ Deux citations:
 
 Avec un peu de mauvaise foi, un exemple: [Fast Inverse Square Root](http://en.wikipedia.org/wiki/Fast_inverse_square_root)
 
-```
+{% highlight C %}
 float Q_rsqrt( float number )
 {
   long i;
@@ -130,4 +130,4 @@ float Q_rsqrt( float number )
 
   return y;
 }
-```
+{% endhighlight %}
