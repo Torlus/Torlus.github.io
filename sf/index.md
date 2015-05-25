@@ -66,11 +66,11 @@ C'est là qu'intervient l'*expert UX*. Son but est d'identifier ce qui ennuie le
 
 A partir de la collecte et de l'analyse de ces données d'utilisation, l'*ergonome* passe à la conception des IHM.
 
-Contrairement à l'architecture **back-end**, où on va rechercher la *généralisation*, l'architecture **front-end** devra être conçue pour gérer la *spécialisation*.
+Les démarches de conception d'architecture **back-end** et **front-end** sont différentes. La première se prête bien à une conception **bottom-up**, alors que la seconde se prête mieux à une conception **top-down**.
 
-Exemple: si au niveau back-end, on va essayer de faire en sorte qu'un SDD/SCT, un paiement par Wallet, par carte, par chèque-vacance rentrent dans un même concept de "transaction", au niveau front-end il faut que cette abstraction n'existe pas.
+Exemple: si au niveau back-end, on va essayer de faire en sorte qu'un SDD/SCT, un paiement par wallet, par carte, par chèque-vacance rentrent dans un même concept de "transaction", au niveau front-end il faut que cette abstraction n'existe pas, ou qu'elle soit invisible.
 
-*Toute abstraction a un prix*. Au niveau code, cela se traduit en général par une perte de performance, ce qui est souvent acceptable (l'inverse en général tombe dans la catégorie "Premature Optimization", j'y reviens).
+*Toute abstraction a un prix*. Au niveau code, cela se traduit en général par une perte de performance, ce qui est souvent acceptable (l'inverse en général tombe dans la catégorie "Premature Optimization", j'y reviens plus tard).
 
 Au niveau de l'utilisateur, cela se traduit par un obstacle mental supplémentaire, qui va à l'encontre de l'UX. Et ça, ce n'est *pas acceptable*.
 
@@ -80,13 +80,15 @@ Plus qu'un pôle "Architecture transversale", il faudra à terme un pôle qui se
 
 Une sorte de [Software Factory](http://en.wikipedia.org/wiki/Software_factory) à l'ère de l'agilité.
 
+Certaines choses réalisées au niveau de *FrontFusion* vont dans le bon sens: tests javascript, code-coverage, code-style, commit-hooks...
+
 # Annexe - Ce qu'il ne faut pas (plus) faire
 
 Petit florilège de mauvaises idées et de mauvaises décisions, ne pas chercher de responsable en dehors de moi-même, pour avoir soit fait ou cautionné, soit laissé faire.
 
 ## Premature Optimisation
 
-La citation du Dr Knuth la plus célèbre, et paradoxalement la moins comprise.
+La citation du Dr *Donald Knuth* la plus célèbre, et paradoxalement la moins comprise.
 
 Dans la famille "Premature", on trouve aussi Premature Abstraction, Premature Generalization, etc.
 
@@ -108,7 +110,7 @@ On parle bien de trois sujets différents, j'espère...
 
 Un bon article sur le sujet: [How to Avoid the Innovator’s Bias for the Solution](http://leanstack.com/how-to-uncover-the-right-problems-and-avoid-the-innovators-bias-for-the-solution/)
 
-Exemple: toute l'architecture historique de la VAD. On y fait rentrer au chausse-pied SDD/SCT, marketplace, mPOS.
+Exemple: toute l'architecture historique de la VAD. On y a fait rentrer au chausse-pied SDD/SCT, marketplace, mPOS.
 
 ## S'éloigner des standards
 
@@ -139,7 +141,7 @@ Deux citations:
 
 ## Ne pas commenter son code
 
-Avec un peu de mauvaise foi, un exemple: [Fast Inverse Square Root](http://en.wikipedia.org/wiki/Fast_inverse_square_root)
+Avec un peu (beaucoup) de mauvaise foi, un exemple: [Fast Inverse Square Root](http://en.wikipedia.org/wiki/Fast_inverse_square_root)
 
 {% highlight c %}
 float Q_rsqrt( float number )
@@ -159,3 +161,13 @@ float Q_rsqrt( float number )
   return y;
 }
 {% endhighlight %}
+
+## Privilégier élégance/concision plutôt que facilité de lecture
+
+Citations:
+
+> Always code as if the person who ends up maintaining your code is a violent psychopath who knows where you live. -- *c2.org Wiki*
+
+> The most effective debugging tool is still careful thought, coupled with judiciously placed print statements.
+
+> Everyone knows that debugging is twice as hard as writing a program in the first place. So if you're as clever as you can be when you write it, how will you ever debug it? -- *Brian Kernighan*
