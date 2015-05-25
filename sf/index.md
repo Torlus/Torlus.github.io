@@ -168,6 +168,6 @@ Citations:
 
 > Always code as if the person who ends up maintaining your code is a violent psychopath who knows where you live. -- *c2.org Wiki*
 
-> The most effective debugging tool is still careful thought, coupled with judiciously placed print statements.
+> The most effective debugging tool is still careful thought, coupled with judiciously placed print statements. -- *Brian Kernighan*
 
 > Everyone knows that debugging is twice as hard as writing a program in the first place. So if you're as clever as you can be when you write it, how will you ever debug it? -- *Brian Kernighan*
