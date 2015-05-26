@@ -30,11 +30,16 @@ Ce qui est fourni devra:
 - Etre monitorable, lever des alertes.
 - Etre documenté (dev et infra).
 
-On traîtera les sujets en Agile, la constitution d'un backlog se fera par les développeurs des équipes projet.
+On traîtera les sujets en Agile, la constitution d'un backlog se fera par les *développeurs* des équipes projet.
+
+Exemple: Alice travaille sur le projet LPL. Elle a besoin d'une fonctionnalité
+supplémentaire sur un composant d'architecture.
+Elle joue donc le rôle du client / de l'utilisateur.
+Au niveau du pôle "architecture transversale", une équipe agile traîte la demande.
 
 ## Partie invisible
 
-Beaucoup plus que l'aspect techniaue, c'est l'aspect *humain* qui va être difficile à traîter.
+Beaucoup plus que l'aspect technique, c'est l'aspect *humain* qui va être difficile à traîter.
 
 Les postes d'architecture sont souvent convoités par les développeurs.
 Si on donne l'image que les éléments d'architecture leur sont *imposés*, cela engendrera des jalousies, des tensions, bref de la contre-productivité.
