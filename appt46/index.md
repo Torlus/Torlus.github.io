@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 9 boulevard des Minimes - Appt 46 - 31200 TOULOUSE
+title: 9 boulevard des Minimes, Appt 46, 31200 TOULOUSE
 tagline: Le juste prix
 ---
 {% include JB/setup %}
@@ -53,5 +53,28 @@ Aucun chantier de travaux n'a été réalisé. La cuisine est quasiment neuve.
 
 ![Cuisine](cuisine.jpg)
 
-# Achat
+# Compromis - extraits
 
+![v1](v1.jpg)
+
+![v2](v2.jpg)
+
+![v3](v3.jpg)
+
+![v4](v4.jpg)
+
+# Compromis - montant et date
+
+![v5](v5.jpg)
+
+![v6](v6.jpg)
+
+# Contact
+
+Si vous avew une offre s'approchant du rapport qualité / prix de celle-ci, contactez-moi.
+
+> Grégory Estrade
+> 9 bvd des Minimes - Appt 78
+> 31200 TOULOUSE
+> Tel: 06 85 60 98 75
+> gregory.estrade@gmail.com
