@@ -73,13 +73,14 @@ Aucun chantier de travaux n'a été réalisé. La cuisine est quasiment neuve.
 
 Si vous disposez d'une offre s'approchant du rapport qualité / prix de celle-ci, contactez-moi.
 
-```
-Grégory Estrade
+***Grégory Estrade***
+
 9 bvd des Minimes - Appt 78
+
 31200 TOULOUSE
+
 
 Tel: 06 85 60 98 75
 
 gregory.estrade@gmail.com
-```
 
