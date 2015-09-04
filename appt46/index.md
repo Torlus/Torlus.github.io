@@ -17,7 +17,7 @@ Il y a 3 types d'appartement dans l'immeuble:
 
 Ces appartements sont accompagnés d'un *cellier*, qui est soit *à part*, soit *intégré* dans l'appartement.
 
-Celui-ci, le 46, est situé au 4ème étage, avec vue sur le canal. Le cellier est intégré à l'appartement.
+Celui-ci, le **46**, est situé au *4ème étage*, avec vue sur le canal. Le cellier est intégré à l'appartement.
 
 C'est un *T4*, dont une cloison a été abattue afin de proposer un plus grand salon.
 
@@ -71,10 +71,14 @@ Aucun chantier de travaux n'a été réalisé. La cuisine est quasiment neuve.
 
 # Contact
 
-Si vous avew une offre s'approchant du rapport qualité / prix de celle-ci, contactez-moi.
+Si vous disposez d'une offre s'approchant du rapport qualité / prix de celle-ci, contactez-moi.
 
 > Grégory Estrade
+
 > 9 bvd des Minimes - Appt 78
+
 > 31200 TOULOUSE
+
 > Tel: 06 85 60 98 75
+
 > gregory.estrade@gmail.com
