@@ -38,20 +38,6 @@
 <body>
   <div class="deck-container">
 
-    <section class="slide" id="sdk">
-      <h2>Utilisation du SDK</h2>
-      <ul>
-        <li>Deux <em>viewports</em>, une méthode <code>onDrawEye(Eye eve)</code>.</li>
-        <li>Génération des matrices adaptées: 
-          <ul>
-            <li><code>eye.getEyeView()</code></li>
-            <li><code>eye.getPerspective(Z_NEAR, Z_FAR)</code></li>
-          </ul>
-        <li>Données de l'<em>acceleromètre</em> disponibles sous forme d'une matrice de transformation: <code>headTransform.getHeadView(...)</code></li>
-        <li>Appui sur la "détente": une méthode <code>onCardboardTrigger()</code></li>
-      </ul>
-    </section>
-
     <!-- Begin slides -->
     <section class="slide" id="ugly">
       <img src="innodays2015_title.png" alt="cover" />
@@ -205,6 +191,20 @@ void main() {
     <section class="slide" id="cardboard">
       <h2>Présentation du Cardboard Kit</h2>
       <img src="cardboard.png" alt="cardboard" />
+    </section>
+
+    <section class="slide" id="sdk">
+      <h2>Utilisation du SDK</h2>
+      <ul>
+        <li>Deux <em>viewports</em>, une méthode <code>onDrawEye(Eye eve)</code>.</li>
+        <li>Génération des matrices adaptées: 
+          <ul>
+            <li><code>eye.getEyeView()</code></li>
+            <li><code>eye.getPerspective(Z_NEAR, Z_FAR)</code></li>
+          </ul>
+        <li>Données de l'<em>acceleromètre</em> disponibles sous forme d'une matrice de transformation: <code>headTransform.getHeadView(...)</code></li>
+        <li>Appui sur la "détente": une méthode <code>onCardboardTrigger()</code></li>
+      </ul>
     </section>
 
     <section class="slide" id="questions">
