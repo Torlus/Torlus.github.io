@@ -220,6 +220,7 @@ h2 {
   padding-top: .5em;
   margin: 0 0 .66666em 0;
   border-bottom: 3px solid #888;
+  text-align: center;
 }
 
 h3 {
@@ -293,7 +294,8 @@ li > ol, li > ul {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Hoefler Text", Constantia, Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  /* font-family: "Hoefler Text", Constantia, Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif; */
+  font-family: "Open Sans";
 }
 
 h1 {
@@ -362,6 +364,12 @@ code {
 pre {
   font-size: 70%;
 }
+
+h3 code {
+  color: #b00;
+  font-size: 120%;
+}
+
 
 blockquote {
   font-family: "Hoefler Text", Constantia, Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif;
