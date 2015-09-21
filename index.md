@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Welcome!
+title: Welcome to Gregory's lair!
 tagline: You have just reached my home page. Enjoy your stay... 
 ---
 {% include JB/setup %}
