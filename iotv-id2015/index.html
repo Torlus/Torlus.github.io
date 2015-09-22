@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>OpenGL ES 2.0 - Shaders - CardBoard SDK</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <style>
+      body {
+        color: #ffffff;
+        font-family:Monospace;
+        font-size:13px;
+        text-align:center;
+        font-weight: bold;
+
+        background-color: #000000;
+        margin: 0px;
+        overflow: hidden;
+      }
+
+      #info {
+        position: absolute;
+        top: 0px; width: 100%;
+        padding: 5px;
+      }
+
+      a {
+
+        color: #ffffff;
+      }
+
+      #oldie a { color:#da0 }
+    </style>
+  </head>
+  <body>
+
+    <div id="container"></div>
+
+    <script src="three.min.js"></script>
+
+    <script id="vertexShader" type="x-shader/x-vertex">
+      varying vec2 vUV; 
+      void main() {
+        vUV = uv;
+        gl_Position = vec4( position, 1.0 );
+      }
+
+    </script>
+
+    <script id="fragmentShader" type="x-shader/x-fragment">
+
+      uniform vec2 resolution;
+      uniform float time;
+      uniform sampler2D texture1;
+
+      varying vec2 vUV;
+
+      void main() {
+        gl_FragColor = texture2D( texture1, vUV );
+      }
+
+    </script>
+
+    <script>
+      var container;
+
+      var camera, scene, renderer;
+
+      var uniformsBg;
+
+      init();
+      animate();
+
+      function init() {
+
+        container = document.getElementById( 'container' );
+
+        camera = new THREE.Camera();
+        camera.position.z = 1;
+
+        scene = new THREE.Scene();
+
+        var geometryBg = new THREE.PlaneBufferGeometry( 1.4, 2 );
+        // var geometryBg = new THREE.BoxGeometry( 1, 1, 1 );
+
+        uniformsBg = {
+          texture1: { type: "t", value: THREE.ImageUtils.loadTexture("id2015.png") },
+          time: { type: "f", value: 1.0 },
+          resolution: { type: "v2", value: new THREE.Vector2() }
+        };
+
+        var materialBg = new THREE.ShaderMaterial( {
+
+          uniforms: uniformsBg,
+          vertexShader: document.getElementById( 'vertexShader' ).textContent,
+          fragmentShader: document.getElementById( 'fragmentShader' ).textContent
+
+        } );
+
+        var meshBg = new THREE.Mesh( geometryBg, materialBg );
+        scene.add( meshBg );
+
+        renderer = new THREE.WebGLRenderer();
+        renderer.setPixelRatio( window.devicePixelRatio );
+        container.appendChild( renderer.domElement );
+
+        onWindowResize();
+
+        window.addEventListener( 'resize', onWindowResize, false );
+
+      }
+
+      function onWindowResize( event ) {
+
+        renderer.setSize( window.innerWidth, window.innerHeight );
+
+        uniformsBg.resolution.value.x = renderer.domElement.width;
+        uniformsBg.resolution.value.y = renderer.domElement.height;
+      }
+
+      //
+
+      function animate() {
+
+        requestAnimationFrame( animate );
+
+        render();
+      }
+
+      function render() {
+
+        renderer.render( scene, camera );
+
+      }
+
+      document.onkeypress = function(e) {
+        document.location = 'index_fancy.html';
+        document.reload();
+      }
+
+    </script>
+
+  </body>
+</html>
