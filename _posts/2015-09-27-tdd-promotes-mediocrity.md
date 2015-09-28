@@ -1,11 +1,13 @@
 ---
 layout: post
-title: "TDD promotes mediocrity"
-description: "TDD"
+title: "[SDR] TDD promotes mediocrity"
+description: "SDR - TDD"
 category:
 tags: []
 ---
 {% include JB/setup %}
+
+Note: the [SDR] prefix means either "Software Development Rants", or "Self-Derision Required", or both. Choose whichever fits you best, as long as you come out with a good laugh after reading this. I can't be held responsible for your bad mood or lack of humor. Sorry.
 
 # assert (obvious == true)
 
@@ -48,4 +50,3 @@ But you simply cannot write anything but obvious, or biased tests, when you're t
 So let other people write some tests for your code, be them written before or after your code is released, it is not important. And ultimately, ditch this awfully written test code, and perform code review instead. Team building and confidence in your colleagues will not be ensured by robots running soon-irrelevant tests, but by proving with careful thought that both you and them know what they're doing.
 
 Tests and code don't matter. People do.
-  
