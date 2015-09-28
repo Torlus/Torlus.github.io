@@ -7,7 +7,7 @@ tagline: You have just reached my home page. Enjoy your stay...
 
 ## About
 
-I am Gregory Estrade, a.k.a **Torlus**, a software developer and a self-taught hardware hacker. I especially like reverse-engineering stuff, and use *FPGAs* to emulate ASICs. I'm als
+I am Gregory Estrade, a.k.a **Torlus**, a software developer and a self-taught hardware hacker. I especially like reverse-engineering stuff, and use *FPGAs* to emulate ASICs. I also like to experiment concepts in various fields of computer programming, but not only.
 
 ## Projects
 
