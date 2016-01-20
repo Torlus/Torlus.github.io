@@ -11,7 +11,7 @@ I am Gregory Estrade, a.k.a **Torlus**, a software developer and a self-taught h
 
 ## Projects
 
-They are available on [GitHub](https://github.com/torlus/), but if you fell like there is something missing, please contact me.
+They are available on [GitHub](https://github.com/torlus/), but if you feel like there is something missing, please contact me.
 
 Here are my latest projects so far:
 
