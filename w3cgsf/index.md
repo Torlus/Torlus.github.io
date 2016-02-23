@@ -83,8 +83,8 @@ Des publicités pour Braintree. C'est assez étonnant de voir des sujets aussi c
 
 En rentrant vers l'hôtel, Cyril et moi nous rendons compte que nous sommes proches du "Chinatown" local. Ici, tout flirte avec le bon goût sans jamais tomber dedans. :)
 
-![0318](IMG_0318.jpg)
+![0318](IMG_0320.jpg)
 
-![0319](IMG_0319.jpg)
+![0319](IMG_0321.jpg)
 
 Dans la soirée, nous retrouvons quelques participants pour une repas dans un restaurant péruvien. Mais, épuisés par le voyage, nous faisons symboliquement acte de présence le temps de quelques "tapas", et rentrons dormir.
