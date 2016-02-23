@@ -83,8 +83,54 @@ Des publicités pour Braintree. C'est assez étonnant de voir des sujets aussi c
 
 En rentrant vers l'hôtel, Cyril et moi nous rendons compte que nous sommes proches du "Chinatown" local. Ici, tout flirte avec le bon goût sans jamais tomber dedans. :)
 
-![0318](IMG_0320.jpg)
+![0320](IMG_0320.jpg)
 
-![0319](IMG_0321.jpg)
+![0321](IMG_0321.jpg)
 
 Dans la soirée, nous retrouvons quelques participants pour une repas dans un restaurant péruvien. Mais, épuisés par le voyage, nous faisons symboliquement acte de présence le temps de quelques "tapas", et rentrons dormir.
+
+# 22/02/2016 - Premier jour, meeting "Interest Group"
+
+On attaque avec un solide petit déjeuner, la nuit a été courte à cause du jetlag, et la journée s'annonce longue...
+
+![0323](IMG_0323.jpg)
+
+J'en profite pour faire quelque photos de l'hôtel et ses alentours.
+
+![0324](IMG_0324.jpg)
+
+![0325](IMG_0325.jpg)
+
+Une demi-heure de marche plus tard, nous arrivons sur le lieu du meeting, à savoir chez Google. Ce n'est hélas pas le siège social (Mountain View) qui se situe asez loin, mais quelques étages dans une tour en plein centre.
+
+![0327](IMG_0327.jpg)
+
+Je récupère mon badge, et me voici officiellement un "Google Guest" :)
+
+![0329](IMG_0329.jpg)
+
+![0333](IMG_0333.jpg)
+
+Direction la salle de meeting, où environ 35 personnes sont conviées. Les thèmes abordés sont extrèmement divers et variés. Tout est calibré à la minute près. C'est très "carré", mais j'ai l'impression d'un "survol" des thèmes, bref, qu'il manque de pilotes dans les différents avions... Certains parmi eux ont plutôt des airs de paquebots, qui vont droit vers un iceberg, mais dont il est déjà trop tard pour effectuer la manoeuvre d'évitement (exemple: harmonisation ISO 20022, traitée par des non-spécialistes, bon courage).
+
+Pause déjeuner, des "club sandwiches" offerts généreusement, je ne regrette pas mon petit-déjeuner gargantuesque du matin, du coup. La vue depuis la terrasse vaut son pesant d'or, ceci dit.
+
+![0334](IMG_0334.jpg)
+
+Les thématiques s'enchaînent, cela donne le tournis. La journée s'achève par un dîner planifié à... 18:30. Restaurant thaïlandais, d'une superficie impressionnante, mais j'ai l'impression que la notion de "petit restaurant" n'a pas cours ici.
+
+![0335](IMG_0335.jpg)
+
+![0336](IMG_0336.jpg)
+
+Vers 21h, tout le monde regagne ses pénates. Ca tombe bien, Cyril et moi n'avons pas encore digéré le jetlag, et visiblement nous ne sommes pas les seuls. Petite pensée pour ceux arrivés parfois de loin le matin, et qui repartent le soir même. Il faut en vouloir...
+
+# 23/02/2016 - Deuxième jour, meeting "Working Group - Day 1"
+
+La différence entre les IG et les WG est que les premiers ne sont pas directement pilotés par le W3C, ils servent principalement de "sources d'inspiration" (d'où la variété des thèmes abordés) aux WG.
+
+Dans les WG, on est plus proche de la réalité. Ici, on parle spécifications, use cases, API. Enfin, dans le vif du sujet.
+
+L'audience est plus nombreuse que celle de l'IG, ce qui selon Cyril est plutôt inhabituel (en général, donner des conseils et lancer des idées rassemble plus de personnes que rédiger des spécifications et réaliser des POCs).
+
+![0337](IMG_0337.jpg)
