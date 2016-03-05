@@ -19,7 +19,7 @@ Et cette année, pas moyen de trouver l'inspiration. Et puis (allez savoir comme
 
 Les informations à son sujet se résument en gros à ce que [Olivier Aichelbaum](http://www.acbm.com/) a écrit sur le sujet:
 
-- [Squale, l'ordinateur qui s'est cassé les dents.](http://www.acbm.com/olivier-aichelbaum/musee/squale/)
+- [Squale, l'ordinateur qui s'est cassé les dents.](http://www.acbm.com/olivier-aichelbaum/musee/images/)
 
 - [Les souvenirs du constructeur de l'ordinateur Squale.](http://www.acbm.com/inedits/squale-apollo-7.html)
 
@@ -86,19 +86,19 @@ Bon, entrons dans le vif du sujet, en passant à l'intervention proprement dite.
 
 Une fois les contrôles de sécurité passés, nous sommes accueillis par **Ariane** qui nous amène dans une salle où nous attend le fameux (ou pas) ***Squale***.
 
-![first](/squale/first.jpg)
+![first](/images/first.jpg)
 
 # Etude externe
 
 L'arrivée de **Jeff** étant un peu retardée, je consacre mon temps aux travaux préliminaires, à savoir prendre quelques photos et procéder au repérage des composants.
 
-![open](/squale/open.jpg)
+![open](/images/open.jpg)
 
 ## Les photos de la carte mère
 
 Ici on trouve le *CPU*, la *DRAM* associée, ainsi que l'*EPROM* contenant le moniteur, et un *PIA*.
 
-![v3](/squale/v3.jpg)
+![v3](/images/v3.jpg)
 
 La machine dispose d'une connectique assez étoffée, on retrouve donc un deuxième *PIA*, ainsi qu'un *ACIA*. Le paquet de résistances en bas constitue certainement des *échelles R/2R* pour la *sortie vidéo*.
 
@@ -106,25 +106,25 @@ On y trouve aussi le *chip audio* (AY-3-8910A).
 
 On trouve aussi un *ampli op* certainement utilisé pour la lecture de *cassettes*.
 
-![v2](/squale/v2.jpg)
+![v2](/images/v2.jpg)
 
 Enfin on retrouve le *chip vidéo* semi-graphique, et sa *DRAM* associée.
 
-![v1](/squale/v1.jpg)
+![v1](/images/v1.jpg)
 
 ## Le repérage des composants
 
 Bon ce n'est pas le travail le plus passionnant du monde, mais il faut bien que quelqu'un le fasse. On prend son mal en patience et ça donne ceci:
 
-![n1](/squale/n1.jpg)
+![n1](/images/n1.jpg)
 
-![n2](/squale/n2.jpg)
+![n2](/images/n2.jpg)
 
-![n3](/squale/n3.jpg)
+![n3](/images/n3.jpg)
 
 
 
-Le descriptif des composants se trouve [ici](/squale/mb.txt).
+Le descriptif des composants se trouve [ici](/images/mb.txt).
 
 ## L'arrivée de Jeff
 
@@ -132,7 +132,7 @@ Le descriptif des composants se trouve [ici](/squale/mb.txt).
 
 Le plus amusant reste son *dumper/émulateur d'EPROMs* sur base de PC accompagné d'une carte ISA dédiée. L'utilitaire logiciel tient sur une disquette, mais évidemment, le lecteur a été remplacé par un [HxC Floppy Drive Emulator](http://hxc2001.free.fr/floppy_drive_emulator/).
 
-![dumper](/squale/dumper.jpg)
+![dumper](/images/dumper.jpg)
 
 Il apporte aussi un *scanner*, dans le but d'avoir une vision du PCB complète. Il suggère une autre idée: le PCB étant une pré-production, et étant translucide, il serait possible de compléter le scan des 2 faces par une photo du PCB *soumis à un forte lumière* afin de voir *les 2 faces en même temps*.
 
@@ -156,11 +156,11 @@ Après un (court) instant de frayeur, le PC de Jeff se montrant un peu récalcit
 
 Ici, on voit l'*EPROM* montée sur la carte-fille du PC.
 
-![ep1](/squale/ep1.jpg)
+![ep1](/images/ep1.jpg)
 
 On lance l'utilitaire, et hop, on observe ceci:
 
-![ep2](/squale/ep2.jpg)
+![ep2](/images/ep2.jpg)
 
 Les divers textes apparaissant (SQUALEMON V1.2, ERREUR) sont plutôt rassurants, en ce sens qu'ils semblent indiquer que le dump est correct.
 
@@ -170,7 +170,7 @@ Bon, là ça se "gâte" dans le sens où le dump de ce type de composant n'est p
 
 C'est pas grave, on sort les vieilles recettes, à savoir utiliser le *port parallèle* du PC pour piloter le "bus d'adresse" du *PAL*, et on fait le repérage des valeurs de sortie sur le "bus de données" à l'*oscilloscope*.
 
-![pp](/squale/pp.jpg)
+![pp](/images/pp.jpg)
 
 Reste à écrire un bout de programme pour piloter le *port parallèle*. Dans quel langage? *Python*? *C*? Non, pas le temps, on y va à l'*assembleur 8088*, à l'ancienne.
 
@@ -178,15 +178,15 @@ Et c'est parti: **Jeff** au pilotage du programme, moi-même au repérage sur la
 
 Vue d'ensemble:
 
-![mh1](/squale/mh1.jpg)
+![mh1](/images/mh1.jpg)
 
 Le repérage à l'*oscilloscope*:
 
-![mh2](/squale/mh2.jpg)
+![mh2](/images/mh2.jpg)
 
 Et on consigne les résultats:
 
-![mh3](/squale/mh3.jpg)
+![mh3](/images/mh3.jpg)
 
 # Conclusion
 
