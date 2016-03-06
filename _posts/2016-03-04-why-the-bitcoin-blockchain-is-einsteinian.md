@@ -67,6 +67,14 @@ And as the Bitcoin universe expands (to a limit), the problem to solve increases
 
 This is where the "magic" resides: for most problems in computer science, the **time** spent to solve them decreases (Moore's law et al.), whereas in Bitcoin's blockchain case, it seems steady...
 
+![coin-supply](/images/coin-supply.png)
+
+> Total Bitcoins over time
+
 And this is where the paradox relies: Bitcoin uses an **Einsteinian, energy-based, spacetime** timestamping scheme to enforce what looks like a **Newtonian, continuous flow of time**.
+
+![snbrightness](/images/snbrightness.jpg)
+
+> This curve is about cosmology, supernovas, etc. I don't know how it is related to the curve above, but they look similar. Math don't lie, so it proves my whole point.
 
 Mind. Blown.
