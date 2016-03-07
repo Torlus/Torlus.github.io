@@ -69,7 +69,7 @@ That's right. **In Bitcoin's universe, Time has been replaced by Energy.**
 
 But what is really disturbing is that, since Einstein, we all know that **it is how the real world works.**
 
-This is what seems to me where the real genius of the Bitcoin's blockchain resides: instead of trying to find a way to replace the need of an absolute timestmap server, which is something that **belongs to a Newtonian perception of the world**, it just goes further by finding a solution in **Einstein's spacetime model**.
+This is what seems to me where the real genius of the Bitcoin's blockchain resides: instead of trying to find a way to replace the need of an absolute timestamp server, which is something that **belongs to a Newtonian perception of the world**, it just goes further by finding a solution in **Einstein's spacetime model**.
 
 And it works!   
 
