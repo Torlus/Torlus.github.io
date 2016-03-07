@@ -41,7 +41,7 @@ The idea of **first** and **subsequent** transfer-of-ownership transactions rely
 
 Our world may be **Einsteinian**, but our perception of it is **Newtonian**.
 
-# Open your book at chapter three
+# Open your book at chapter three...
 
 Chapter #3 of [Bitcoin paper](https://bitcoin.org/bitcoin.pdf) is entitled **Timestamp server**.
 
@@ -59,13 +59,25 @@ The **proof-of-work** is the idea of finding a solution to a given problem of cr
 
 Think about it as a **giant lottery**.
 
-# From Einstein to Newton... wait, what?
+# Why does it matter?
 
-Now, let's go further: no matter how much time is spent by computers all around the world to find a solution, the idea of a **continuous flow of time** is dictacted by a chain of "lucky ones" solving the problem.
+Now, let's go further: **no matter how many attempts, how much time** is spent by computers all around the world to find a solution, the idea of a **continuous flow of time** is dictacted by a chain of "lucky ones" solving the problem.
+
+No matter how much **real world's time** is spent trying (or not) to find a solution, it is only when such a solution is eventually found that the **blockchain's time** "advances" (i.e. a new block of transactions is added to the blockchain). This is the **energy** spent to find the **correct solution**, the **proof-of-work** that rules the world.
+
+That's right. **In Bitcoin's universe, Time has been replaced by Energy.**
+
+But what is really disturbing is that, since Einstein, we all know that **it is how the real world works.**
+
+This is what seems to me where the real genius of the Bitcoin's blockchain resides: instead of trying to find a way to replace the need of an absolute timestmap server, which is something that **belongs to a Newtonian perception of the world**, it just goes further by finding a solution in **Einstein's spacetime model**.
+
+And it works!   
+
+# From Einstein to Newton... wait, what?
 
 And as the Bitcoin universe expands (to a limit), the problem to solve increases in difficulty, adapting itself to the whole computing power of its members.
 
-This is where the "magic" resides: for most problems in computer science, the **time** spent to solve them decreases (Moore's law et al.), whereas in Bitcoin's blockchain case, it seems steady...
+This is where another part of the "magic" resides: for most problems in computer science, the **time** spent to solve them decreases (Moore's law et al.), whereas in Bitcoin's blockchain case, it seems steady...
 
 ![coin-supply](/images/coin-supply.png)
 
