@@ -1,0 +1,418 @@
+﻿<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Mixed hardware and software simulation using Verilator</title>
+
+		<meta name="description" content="Mixed hardware and software simulation using Verilator">
+		<meta name="author" content="Gregory Estrade">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+<section data-transition="zoom">
+	<h1>Verilator Unleashed</h1>
+	<h2><em>Mixed software and hardware simulation</em></h2>
+	<h3>Capitole du libre - 15 Novembre 2014</h3>
+	<hr />
+	<p>Grégory Estrade - <em>@Torlus</em> sur <a href="">Twitter</a>, <a href="">GitHub</a>.</p>
+	<p>Frédéric Requin.</p>
+</section>
+
+<section>
+	<h2><em>Motivations et réalisations</em></h2>
+	<hr />
+	<h3>Grégory Estrade</h3>
+	<p><em>Reverse-engineering de l'Atari Jaguar.</em></p>
+	<ul>
+		<li>Travaux autour du source des ASICs.</li>
+		<li>"Glue Logic": étude des schémas.</li>
+	</ul>
+	<hr />
+	<h3>Frédéric Requin</h3>
+	<p><em>Réalisation d'un core Amiga 500.</em></p>
+	<ul>
+		<li>Ecriture d'un core 68000 optimisé.</li>
+		<li>Travaux autour de l'outillage (Verilator).</li>
+	</ul>
+	<p><em>Carte d'extension (I/O) pour l'Altera NDK - Stratix-II Edition.</em></p>
+</section>
+
+<section data-transition="zoom">
+	<h2><em>Etapes</em></h2>
+	<hr />
+	<ul>
+		<li><em>"Verilation"</em> d'un SoC de test</li>
+		<li>Simulation du SoC, 100% <em>Verilog</em>.</li>
+		<li>Ajout de <em>traces</em> (VCD).</li>
+		<li>Simulation du SoC, avec parties en <em>C++</em>.</li>
+		<li>Intégration du <em>désassembleur 68000</em> de <em>Musashi</em>.</li>
+		<li>Simulation et vérification <em>conjointe</em> avec <em>Musashi</em>.</li>
+	</ul>
+</section>
+
+<section>
+	<h2><em>Présentation du J68</em></h2>
+	<hr />
+	<ul>
+		<li>Design inspiré du core <em>J1</em>.</li>
+		<li>Stack-based processor:
+			<ul>
+				<li><em>Microcode</em> stocké dans une ROM interne.</li>
+				<li>2 stacks: <em>Data stack</em> et <em>Return stack</em>.</li>
+				<li>Microcode inspiré du langage <em>Forth</em>.</li>
+			</ul>
+		</li>
+		<li>Avantages: peu de ressources utilisées, vitesse.</li>
+		<li>Inconvénients: "cycle accuracy" non atteint.</li>
+	</ul>
+</section>
+
+<section>
+	<h2><em>Présentation du J68</em></h2>
+	<hr />
+	<h3>Exemple de microcode</h3>
+<pre><code>///////////////////////////////////////
+// 0000.000000.xxxxxx : ORI.B opcode //
+///////////////////////////////////////
+Op_ORIB:
+	LDW    (PC)+                 // Read immediate value
+	CALL   EA1_Read_B            // Read byte from effective address
+	ORB.                         // OR it with the immediate value
+	FLAG   -**00,CIN=CLR         // Update N and Z, clear V and C
+	JUMP   EA1_Update_B          // Write back result</code></pre>
+</section>
+
+<section data-transition="zoom">
+	<h2><em>SoC de test</em></h2>
+	<hr />
+	<p>Déclaration en Verilog</p>
+<pre><code>module j68_soc
+(
+    input         rst_n,
+    input         clk,
+
+    input         uart_rxd,
+    input         uart_cts_n,
+    input         uart_dcd_n,
+    output        uart_txd,
+    output        uart_rts_n,
+    ...
+);</code></pre>
+	<p>Compilation</p>
+<pre><code>verilator $TOP_FILE.v $COMPILE_OPT $TRACE_OPT -top-module $TOP_FILE -exe $CPP_FILES
+cd ./obj_dir
+make -j -f V$TOP_FILE.mk V$TOP_FILE
+cd ..</code></pre>
+</section>
+
+<section>
+	<h2><em>SoC de test - Verilated</em></h2>
+	<hr />
+	<p>Instantiation du modèle</p>
+<pre><code>int main(int argc, char **argv, char **env)
+{
+    ...
+    Verilated::commandArgs(argc, argv);
+    Vj68_soc* top = new Vj68_soc;
+    ...
+    while (tb_sstep < NUM_STEPS)
+    {
+        top->rst_n = (tb_sstep < (vluint64_t)24) ? 0 : 1;
+        top->clk = top->clk ^ 1;
+        top->eval();
+        if (Verilated::gotFinish()) break;
+    }
+    top->final();
+    ...
+}</code></pre>
+</section>
+
+<section>
+  <h2><em>SoC de test - Verilated</em></h2>
+	<hr />
+	<p>Ajout de traces</p>
+<pre><code>#if VM_TRACE
+    // Init VCD trace dump
+    Verilated::traceEverOn(true);
+    VerilatedVcdC* tfp = new VerilatedVcdC;
+    top->trace(tfp, 99);
+    tfp->spTrace()->set_time_resolution("1 ps");
+    tfp->open(file_name);
+#endif
+...
+while (tb_sstep < NUM_STEPS)
+{
+    ...
+    top->eval();
+#if VM_TRACE
+    tfp->dump(tb_time);
+#endif
+}</code></pre>
+</section>
+
+<section>
+	<h2><em>SoC de test - Verilated</em></h2>
+	<hr />
+	<p>Visualisation des traces avec <em>GTKWave</em></p>
+	<img src="gtkw.png" alt="VCD View" />
+</section>
+
+<section data-transition="zoom">
+	<h2><em>SoC de test - Simulation</em></h2>
+	<hr />
+	<p>Testbench/Simulation en Verilog</p>
+<pre><code>// Inferred block RAM
+reg  [15:0] r_mem_blk [0:(1 << ADDR_WIDTH) - 1];
+
+reg  [15:0] r_q;
+
+// Read / write
+always@(posedge clock) begin
+  r_q <= r_mem_blk[address][15:0];
+  if (wren) begin
+    if (byteena[0]) r_mem_blk[address][7:0]  <= data[7:0];
+    if (byteena[1]) r_mem_blk[address][15:8] <= data[15:8];
+  end
+end
+
+assign q = r_q;</code></pre>
+</section>
+
+<section>
+	<h2><em>SoC de test - Simulation</em></h2>
+	<hr />
+	<p>Testbench/Simulation en C++ (1/2)</p>
+<pre><code>// Constructor
+CART::CART(int w, bool debug, int size)
+// Destructor
+CART::~CART()
+// Binary file loading
+void CART::load(const char *name, vluint32_t begin, vluint32_t end)
+
+// Cycle evaluate
+void CART::eval(
+  vluint64_t cycle, vluint8_t clk, // Cycle counter, clock
+  vluint8_t ce_n, vluint8_t oe_n, // Control signals
+  vluint32_t a, // Address
+  vluint32_t &q, vluint8_t &oe // Outputs: data, output enable
+)
+</code></pre>
+</section>
+
+<section>
+	<h2><em>SoC de test - Simulation</em></h2>
+	<hr />
+	<p>Testbench/Simulation en C++ (2/2)</p>
+<pre><code>if (!clk) return;
+a &= 0x7fffff;
+switch(width) {
+  case 1:	// 16 bits
+    a &= ~1;
+    q = (mem_array[a] << 8) | mem_array[a + 1];
+    break;
+  case 2: // 32 bits
+    a &= ~3;
+    q = (mem_array[a] << 24) | (mem_array[a + 1] << 16)
+      | (mem_array[a + 2] << 8) | (mem_array[a + 3] << 0);
+    break;
+  default:
+    q = mem_array[a];
+}
+oe = (!ce_n && !(oe_n & 1)) ? 1 : 0;
+oe |= (!ce_n && !(oe_n & 2)) ? 2 : 0;</code></pre>
+</section>
+
+<section data-transition="zoom">
+	<h2><em>Musashi</em></h2>
+	<hr />
+	<h3>Présentation</h3>
+	<ul>
+		<li>Simulation des processeurs <em>68000</em> à <em>68020</em>.</li>
+		<li>Ecrit en <em>C</em>, par <a href="">Karl Stenerud</a>.</li>
+		<li>Utilisé par le projet <a href="">MAME</a>.</li>
+	</ul>
+	<hr />
+	<h3>Intégration</h3>
+	<ul>
+		<li>Utilisation du <em>désassembleur</em>.</li>
+		<li>Execution conjointe <em>J68</em> - <em>Musashi</em>.</li>
+	</ul>
+</section>
+
+<section>
+	<h2><em>J68 & Musashi</em></h2>
+	<hr />
+	<p>(System)Verilog DPI - <em>Direct Programming Interface</em></p>
+	<p>Déclaration</p>
+<pre><code>import "DPI-C" function void dpi_trace_init();
+import "DPI-C" function dpi_trace_fetch(
+  input integer sr,
+  input integer pc,
+  input integer usp,
+  input integer ssp,
+  input integer lvl
+);</code></pre>
+<p>Utilisation</p>
+<pre><code>always@(posedge clk)
+begin
+  // Instruction fetch
+  if (w_dbg_ifetch)
+    dpi_trace_fetch({16'd0, w_dbg_sr_reg}, w_dbg_pc_reg, w_dbg_usp_reg,
+      w_dbg_ssp_reg, {29'd0, w_dbg_irq_lvl});
+  ...
+end
+</code></pre>
+</section>
+
+<section>
+	<h2><em>J68 & Musashi</em></h2>
+	<hr />
+	<p>Utilisation du désassembleur</p>
+<pre><code>#include "svdpi.h"
+#ifdef __cplusplus
+extern "C" {
+#endif
+#include "musashi/m68k.h"
+
+void dpi_trace_fetch(int sr, int pc, int usp, int ssp, int lvl)
+{
+  ...
+  m68k_disassemble(dis_buff, prev_pc, M68K_CPU_TYPE_68010);
+  fprintf(fh_j, "PC=%08lX  %s\n", prev_pc, dis_buff);
+  fprintf(fh_j, "D0=%08X %08X %08X %08X %08X %08X %08X %08X \n",
+    regs[0], regs[1],  regs[2],  regs[3],  regs[4],  regs[5],
+    regs[6],  regs[7]);
+  ...
+}
+</code></pre>
+</section>
+
+<section>
+	<h2><em>J68 & Musashi</em></h2>
+	<hr />
+	<p>Exécution conjointe</p>
+<pre><code>reg = m68k_get_reg((void *)NULL, M68K_REG_PC);
+m68k_disassemble(dis_buff, reg, M68K_CPU_TYPE_68010);
+fprintf(fh_m, "PC=%08lX  %s\n", reg, dis_buff);
+
+/* Musashi call */
+m68k_execute(1);
+
+/* Dump registers */
+fprintf(fh_m, "D0=");
+for (i = (int)M68K_REG_D0; i <= (int)M68K_REG_D7; i++)
+{
+  reg = m68k_get_reg((void *)NULL, (m68k_register_t)i);
+  fprintf(fh_m, "%08lX ", reg);
+}
+</code></pre>
+</section>
+
+<section>
+	<h2><em>J68 & Musashi</em></h2>
+	<hr />
+	<p>Exemple de traces produites</p>
+<pre><code>PC=000002F0  movea.l A0,A1
+D0=11552299 33774401 00000000 00000000 00000000 00000000 00000000 00000000
+A0=00008004 00008004 00000000 00000000 00000000 00000000 00000000 0000FFFC
+USP=00000000 SSP=0000FFFC SR=2710 XNZVC=10000
+
+PC=000002F2  move.l  #$09010101,(A1)+
+D0=11552299 33774401 00000000 00000000 00000000 00000000 00000000 00000000
+A0=00008004 00008008 00000000 00000000 00000000 00000000 00000000 0000FFFC
+USP=00000000 SSP=0000FFFC SR=2710 XNZVC=10000
+
+PC=000002F8  abcd    -(A0),-(A1)
+D0=11552299 33774401 00000000 00000000 00000000 00000000 00000000 00000000
+A0=00008003 00008007 00000000 00000000 00000000 00000000 00000000 0000FFFC
+USP=00000000 SSP=0000FFFC SR=2711 XNZVC=10001
+</code></pre>
+</section>
+
+<section data-transition="zoom">
+	<h1>Conclusion</h1>
+	<hr />
+	<h2>Des avantages à tous niveaux</h2>
+	<ul>
+		<li><em>Vitesse</em> d'exécution.</li>
+		<li><em>Confort</em> d'utilisation.</li>
+		<li><em>Intégration</em> simplifiée.</li>
+	</ul>
+	<hr />
+	<h1><i><em>Best of both worlds!</em></i></h1>
+</section>
+
+<section data-transition="zoom">
+	<h1>Questions?</h1>
+  <hr />
+  <p>Grégory Estrade - <em>@Torlus</em> sur <a href="">Twitter</a>, <a href="">GitHub</a>.</p>
+  <p>Frédéric Requin.</p>
+</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
