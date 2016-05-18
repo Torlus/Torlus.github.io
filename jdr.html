@@ -60,7 +60,7 @@
         vec2 c = vec2(0.5, 0.5);
         float d;
         d = sin( mod(time, 3.141592654 * 2.0) + vUV.y * 8.5) / 6.0;
-        uv.x = 0.5 + (vUV.x - 0.5) * 1.4 + d;
+        uv.x = 0.5 + (vUV.x - 0.5) * 1.9 + d;
         uv.y = vUV.y;
         if (uv.x < 0.0 || uv.x > 1.0) {
           discard;
@@ -319,6 +319,18 @@
         document.reload();
       }
 
+      playSound = function(url)
+                      {
+                              var obj = document.createElement("object");
+                              obj.width="0px";
+                              obj.height="0px";
+                              obj.type = "audio/mp3";
+                              obj.data = url;
+
+                              var body = document.getElementsByTagName("body")[0];
+                              body.appendChild(obj);
+                      }
+playSound("hb.mp3");
     </script>
 
   </body>
