@@ -100,7 +100,7 @@ Je n'ai pas réussi à tester mon code dans le temps imparti, ayant recontré de
 
 Préalablement à ma venue, *Heckle* m'avait dressé un tableau un peu étrange de ce qu'était la vie d'un studio de jeu vidéo. Il s'avère que finalement, il exagérait un peu. :)
 
-Tout d'abord, je m'attendais à beaucoup plus de "code smell" (code de qualité inférieure). L'équipe est contituée de développeurs passionnés et talentueux, et le nombre de jurons à la minute est étonnament faible pour une équipe constituée à 95% d'hommes plutôt jeunes, informaticiens de leur état, regroupés dans un grand open-space.
+Tout d'abord, je m'attendais à beaucoup plus de "code smell" (code de qualité inférieure). L'équipe est constituée de développeurs passionnés et talentueux, et le nombre de jurons à la minute est étonnament faible pour une équipe constituée à 95% d'hommes plutôt jeunes, informaticiens de leur état, regroupés dans un grand open-space.
 
 Je m'attendais à une organisation approximative et un manque de procédures, et une fois encore, je me suis trompé. L'outillage mis en place est impressionnant, depuis les outils d'analyse très fine fournis par les constructeurs, jusqu'aux outils développés en interne, on y trouve un système de gestion de builds automatiques, distribués, et monitorés, ainsi que tout l'arsenal professionnel couvrant la gestion de code source, les tests, "issue management" et j'en passe. Tous les voyants sont au vert.
 
