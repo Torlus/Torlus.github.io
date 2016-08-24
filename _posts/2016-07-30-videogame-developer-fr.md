@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Dans la peau d'un développeur de jeux vidéo [FR]"
+title: "Dans la peau d'un développeur de jeux vidéo [fr]"
 description: "Récit de quelques jours passés au sein d'un studio de développement de jeux vidéo"
 category:
 tags: []
