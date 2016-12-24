@@ -44,7 +44,7 @@ You will then be able to pay your debt to me, by lending money to this person,
 putting him or her in moral debt to you, with the duty of delivering the very
 same message.
 
-## Implement details
+## Implementation details
 
 - Bootstrapping a debtchain is easy: make the receiver read this article, then "start small" to get used to the process.
 It works better with many people and small debts, than with a big debt to a single person. Warning, starting too fast may lead up to unexpected levels of emotions, and tears.
@@ -67,3 +67,5 @@ responsibility of the lender, who should send the money to his/her favorite char
 
 - On the latter point, If you've liked this reading and want to please its author, please choose one
 association linked to Parkinson's Disease, such as [Parkinson's Disease Foundation](http://www.pdf.org/) or [France Parkinson](http://www.franceparkinson.fr/).
+
+Merry Christmas and best wishes.
