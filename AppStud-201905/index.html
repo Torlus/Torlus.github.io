@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+
+  <title>Developers, developers, developers, developers</title>
+
+  <!-- Required stylesheet -->
+  <link rel="stylesheet" media="screen" href="core/deck.core.css">
+
+  <!-- Extension CSS files go here. Remove or add as needed. -->
+  <link rel="stylesheet" media="screen" href="extensions/goto/deck.goto.css">
+  <link rel="stylesheet" media="screen" href="extensions/menu/deck.menu.css">
+  <link rel="stylesheet" media="screen" href="extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" media="screen" href="extensions/status/deck.status.css">
+  <link rel="stylesheet" media="screen" href="extensions/scale/deck.scale.css">
+
+  <!-- Style theme. More available in /themes/style/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="themes/style/web-2.0.css">
+
+  <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="themes/transition/horizontal-slide.css">
+
+  <!-- Basic black and white print styles -->
+  <link rel="stylesheet" media="print" href="core/print.css">
+
+  <!-- Required Modernizr file -->
+  <script src="modernizr.custom.js"></script>
+</head>
+<body>
+  <div class="deck-container">
+
+    <!-- Begin slides. Just make elements with a class of slide. -->
+
+    <section class="slide">
+      <h1>Corporate Branding and Networking</h1>
+    </section>
+
+    <section class="slide">
+      <h2>Qui vous parle?</h2>
+      <h3 align="center">Gregory Estrade - @Torlus - <a href="http://lvt.tl/">lvt.tl</a></h3>
+      <img src="Torlus.jpg" alt="Torlus" />
+      <ul>
+        <li>Développeur principal, puis Directeur du développement et de l'innovation @Lyra</li>
+        <li>Reverse-engineering, conception hardware (FPGA)</li>
+        <li>Divers: Orateur, Silicium, W3C, Simplon.co, France Parkinson</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Le constat</h2>
+      <ul>
+        <li><h3>On cherche à recruter les meilleurs</h3></li>
+        <li><h3>Il faut les connaitre</h3></li>
+        <li><h3>Il faut se faire connaitre</h3></li>
+        <li><h3>Comment rendre plus attractive la société ?</h3></li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Networking</h2>
+      <blockquote>
+        <p>Networking is all about giving. Give to Get.</p>
+        <p><cite>Source diverses</cite></p>
+      </blockquote>
+      <blockquote>
+        <p>Give and ye shall receive.</p>
+        <p><cite>Luke 6:38 KJV - Bram Cohen</cite></p>
+      </blockquote>
+    </section>
+
+
+    <section class="slide">
+      <h2>Il faut les connaitre</h2>
+      <h3>Meetup.com</h3>
+      <ul>
+        <li>Toulouse GDG (Google Developers Groups).</li>
+        <li>Toulouse JUG (Java User Group).</li>
+        <li>Toulouse DevOps.</li>
+        <li>UX Flupa.</li>
+        <li>JS &amp; co</li>
+      </ul>
+      <h3>Brown Bag Lunch</h3>
+      <h3>Lieux de coworking</h3>
+      <ul>
+        <li>Etincelle coworking.</li>
+        <li>Lab Oikos.</li>
+        <li>Harry Cow.</li>
+        <li>At Home.</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Il faut se faire connaitre</h2>
+      <p>Et c'est là ou ça se gate... à cause du <em>Syndrome de l'imposteur</em></p>
+      <blockquote>
+        <p>Doute maladif qui consiste essentiellement à nier la propriété de tout accomplissement personnel.</p>
+        <p><cite>Wikipedia - Syndrome de l'imposteur</cite></p>
+      </blockquote>
+    </section>
+
+    <section class="slide">
+      <h2>Il faut se faire connaitre</h2>
+      <img src="imposter.jpg" alt="Imposter" />
+    </section>
+
+    <section class="slide">
+      <h2>Exemples</h2>
+      <ul>
+        <li><h3><a href="http://torlus.github.io/atbdx2016/">La délicate agilité du mammouth</a></h3></li>
+        <li><h3><a href="http://torlus.github.io/bbl-af-inn/">Innovation @Lyra</a></h3></li>
+        <li><h3><a href="http://torlus.github.io/iotv-id2015/">OpenGL ES 2.0 - Shaders - Cardboard SDK</a></h3></li>
+        <li><h3><a href="http://torlus.github.io/diy/">Electronique &amp; DIY</a></h3></li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Conclusion</h2>
+      <ul>
+        <li><h3>Assister à des conférences.</h3></li>
+        <li><h3>Financer quelques événements.</h3></li>
+        <li><h3>Proposer des talks.</h3></li>
+        <li><h3>Donner des talks à plusieurs.</h3></li>
+      </ul>
+    </section>
+
+
+    <!-- End slides. -->
+
+    <!-- Begin extension snippets. Add or remove as needed. -->
+
+    <!-- deck.navigation snippet -->
+    <div aria-role="navigation">
+      <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+      <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+    </div>
+
+    <!-- deck.status snippet -->
+    <p class="deck-status" aria-role="status">
+      <span class="deck-status-current"></span>
+      /
+      <span class="deck-status-total"></span>
+    </p>
+
+    <!-- deck.goto snippet -->
+    <form action="." method="get" class="goto-form">
+      <label for="goto-slide">Go to slide:</label>
+      <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+      <datalist id="goto-datalist"></datalist>
+      <input type="submit" value="Go">
+    </form>
+
+    <!-- End extension snippets. -->
+  </div>
+
+<!-- Required JS files. -->
+<script src="jquery.min.js"></script>
+<script src="core/deck.core.js"></script>
+
+<!-- Extension JS files. Add or remove as needed. -->
+<script src="extensions/menu/deck.menu.js"></script>
+<script src="extensions/goto/deck.goto.js"></script>
+<script src="extensions/status/deck.status.js"></script>
+<script src="extensions/navigation/deck.navigation.js"></script>
+<script src="extensions/scale/deck.scale.js"></script>
+
+<!-- Initialize the deck. You can put this in an external file if desired. -->
+<script>
+  $(function() {
+    $.deck('.slide');
+  });
+</script>
+</body>
+</html>
